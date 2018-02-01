@@ -3,13 +3,13 @@ Software Requirements Specification
 for
 <Project>
 Version 1.0 approved
-Prepared by Nick, Brandon Alfred, Mario, Alejandro...
+Prepared by Nick Kasten, Brandon Alfred, Mario, Alejandro...
 <organization>
 <date created>
 
 
 
-Table of Contents
+Table of Contents
 Table of Contents	ii
 Revision History	ii
 1.	Introduction	1
