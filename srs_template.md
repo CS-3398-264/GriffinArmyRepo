@@ -2,7 +2,7 @@
 for
 <Project>
 Version 1.0 approved
-Prepared by Nick Kasten, Brandon Alfred, Mario, Alejandro...
+Prepared by Nick Kasten, Brandon Alfred, Mario Rodriguez, Alejandro...
 <organization>
 <date created>
 
