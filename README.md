@@ -1,1 +1,1 @@
-# GriffenArmyRepo
+# GriffinArmyRepo
