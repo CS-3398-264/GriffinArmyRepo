@@ -41,16 +41,20 @@ _<List any assumed factors (as opposed to known facts) that could affect the req
 ## 3. External Interface Requirements
 
 ### 3.1 User Interfaces
+* Game will use a GUI interface and mouse/keyboard for input.
+* include pictures of the main menu, the board, any other important application states (screenshots)
 _<Describe the logical characteristics of each interface between the software product and the users. This may include sample screen images, any GUI standards or product family style guides that are to be followed, screen layout constraints, standard buttons and functions (e.g., help) that will appear on every screen, keyboard shortcuts, error message display standards, and so on. Define the software components for which a user interface is needed. Details of the user interface design should be documented in a separate user interface specification.>_
 
 ### 3.2 Hardware Interfaces
+* Since Java code runs on a virtual machine.. our game will have no knowledge of or concern for the hardware it is running on.
 _<Describe the logical and physical characteristics of each interface between the software product and the hardware components of the system. This may include the supported device types, the nature of the data and control interactions between the software and the hardware, and communication protocols to be used.>_
 
 ### 3.3 Software Interfaces
+* maybe we can talk about MVC here? We'll have a GUI front end that is talking to our back-end. Maybe this section is irrelevant.
 _<Describe the connections between this product and other specific software components (name and version), including databases, operating systems, tools, libraries, and integrated commercial components. Identify the data items or messages coming into the system and going out and describe the purpose of each. Describe the services needed and the nature of communications. Refer to documents that describe detailed application programming interface protocols. Identify data that will be shared across software components. If the data sharing mechanism must be implemented in a specific way (for example, use of a global data area in a multitasking operating system), specify this as an implementation constraint.>_
 
 ### 3.4 Communications Interfaces
-_<Describe the requirements associated with any communications functions required by this product, including e-mail, web browser, network server communications protocols, electronic forms, and so on. Define any pertinent message formatting. Identify any communication standards that will be used, such as FTP or HTTP. Specify any communication security or encryption issues, data transfer rates, and synchronization mechanisms.>_
+* We should take this section out since we don't have any remote players/database.. unless we want to get crazy and use a database for a hall of fame or something.
 
 ## 4. System Features
 _<This template illustrates organizing the functional requirements for the product by system features, the major services provided by the product. You may prefer to organize this section by use case, mode of operation, user class, object class, functional hierarchy, or combinations of these, whatever makes the most logical sense for your product.>_
