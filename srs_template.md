@@ -1,19 +1,16 @@
 ## 1. Introduction
 
 ### 1.1 Purpose 
-_<Identify the product whose software requirements are specified in this document, including the revision or release number. Describe the scope of the product that is covered by this SRS, particularly if this SRS describes only part of the system or a single subsystem.>_
+This product shall provide the user with a reliable, well designed chess game. The version of this product is 1.0 and this SRS shall cover the full scope of the chess game.
 
 ### 1.2 Document Conventions
-_<Describe any standards or typographical conventions that were followed when writing this SRS, such as fonts or highlighting that have special significance. For example, state whether priorities  for higher-level requirements are assumed to be inherited by detailed requirements, or whether every requirement statement is to have its own priority.>_
+(This is where any definitions, acronyms, and abbreviations would be)
 
-### 1.3 Intended Audience and Reading Suggestions
-_<Describe the different types of reader that the document is intended for, such as developers, project managers, marketing staff, users, testers, and documentation writers. Describe what the rest of this SRS contains and how it is organized. Suggest a sequence for reading the document, beginning with the overview sections and proceeding through the sections that are most pertinent to each reader type.>_
+### 1.3 Product Scope
+This chess game is developed entirely in Java and can be launched using a basic Java supported IDE such as Eclipse. This entire project will be available on GitHub.
 
-### 1.4 Product Scope
-_<Provide a short description of the software being specified and its purpose, including relevant benefits, objectives, and goals. Relate the software to corporate goals or business strategies. If a separate vision and scope document is available, refer to it rather than duplicating its contents here.>_
-
-### 1.5 References
-_<List any other documents or Web addresses to which this SRS refers. These may include user interface style guides, contracts, standards, system requirements specifications, use case documents, or a vision and scope document. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.>_
+### 1.4 References
+“Laws of Chess: For competitions starting before 1 July 2014.” World Chess Federation - FIDE, www.fide.com/component/handbook/?id=124&view=article.
 
 ## 2. Overall Description
 
