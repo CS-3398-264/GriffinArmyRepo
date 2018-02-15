@@ -19,8 +19,8 @@ _<List any other documents or Web addresses to which this SRS refers. These may 
 
 ### 2.1 Product Perspective
 _<Describe the context and origin of the product being specified in this SRS. For example, state whether this product is a follow-on member of a product family, a replacement for certain existing systems, or a new, self-contained product. If the SRS defines a component of a larger system, relate the requirements of the larger system to the functionality of this software and identify interfaces between the two. A simple diagram that shows the major components of the overall system, subsystem interconnections, and external interfaces can be helpful.>_
-The product is a java based application for a Chess game. The system provides simple mechanism for users to play against an opponent in a game of chess.
 
+The product is a java based stand alone application for a Chess game. The system provides simple mechanism for users to play against an opponent in a game of chess.
 The following are the main features that are included in the game.
 1/2 player: The user can play against the computer, or against a second player.
 Difficulty: If playing 1-player, the user can select varying AI difficulty
@@ -30,12 +30,21 @@ Tips/How to play: A section that includes an explanation of the basic rules of c
 ### 2.2 Product Functions
 _<Summarize the major functions the product must perform or must let the user perform. Details will be provided in Section 3, so only a high level summary (such as a bullet list) is needed here. Organize the functions to make them understandable to any reader of the SRS. A picture of the major groups of related requirements and how they relate, such as a top level data flow diagram or object class diagram, is often effective.>_
 
+Let the user choose options from a menu, which are: 
+   Single player -> Start a game of chess against a computer: Difficulty selection is also available here
+   Two-player (if it's one of the features we'll implement) -> Start a game of chess with two players
+   Account -> Let user see their account info (history/settings/scores/etc)
+   Tips/How to play -> display a list of tips/how-to-play manual
+ 
+
 ### 2.3 User Classes and Characteristics
 _<Identify the various user classes that you anticipate will use this product. User classes may be differentiated based on frequency of use, subset of product functions used, technical expertise, security or privilege levels, educational level, or experience. Describe the pertinent characteristics of each user class. Certain requirements may pertain only to certain user classes. Distinguish the most important user classes for this product from those who are less important to satisfy.>_
-The expected user simply is anyone with access to a computer. It is expected that the user has a general knowledge how to interact with the it. The user is not expected to know Chess, as the rules and tips/strategies will be included in the application.
+
+The expected user simply is anyone with access to a computer. There are no privilege levels/educational level/expertise nor experience required. The user is not expected to know Chess, as the rules and tips/strategies will be included in the application.
 
 ### 2.4 Operating Environment
 _<Describe the environment in which the software will operate, including the hardware platform, operating system and versions, and any other software components or applications with which it must peacefully coexist.>_
+
 This will be a Java based application, so the user must have installed the Java environment in their computer. 
 
 ### 2.5 Design and Implementation Constraints
@@ -43,10 +52,13 @@ _<Describe any items or issues that will limit the options available to the deve
 
 ### 2.6 User Documentation
 _<List the user documentation components (such as user manuals, on-line help, and tutorials) that will be delivered along with the software. Identify any known user documentation delivery formats or standards.>_
+
 A section with the Chess rules will be included, along with some initial basic tips to give the user a good idea on how to start playing chess. 
+(Aside, in case there are any bugs that were not able to be fixed at time of product delivery, perhaps to include and list of possible workarounds?)
 
 ### 2.7 Assumptions and Dependencies
 _<List any assumed factors (as opposed to known facts) that could affect the requirements stated in the SRS. These could include third-party or commercial components that you plan to use, issues around the development or operating environment, or constraints. The project could be affected if these assumptions are incorrect, are not shared, or change. Also identify any dependencies the project has on external factors, such as software components that you intend to reuse from another project, unless they are already documented elsewhere (for example, in the vision and scope document or the project plan).>_
+
 Since this will be a standalone application, there will not be any other dependencies aside the requirement of having the Java environment installed in the computer. 
 
 ## 3. External Interface Requirements
