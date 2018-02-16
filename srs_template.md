@@ -76,19 +76,19 @@ _<Itemize the detailed functional requirements associated with this feature. The
 ## 5. Other Nonfunctional Requirements
 
 ### 5.1 Performance Requirements  
-_<If there are performance requirements for the product under various circumstances, state them here and explain their rationale, to help the developers understand the intent and make suitable design choices. Specify the timing relationships for real time systems. Make such requirements as specific as possible. You may need to state performance requirements for individual functional requirements or features.>_
+The program shall not crash. Other than that, there are not any specific performance requirements. The time complexity and space complexity have not been specified. The overall goal is to get the program running without any bugs or user-related problems.
 
 ### 5.2 Safety Requirements  
-_<Specify those requirements that are concerned with possible loss, damage, or harm that could result from the use of the product. Define any safeguards or actions that must be taken, as well as actions that must be prevented. Refer to any external policies or regulations that state safety issues that affect the product’s design or use. Define any safety certifications that must be satisfied.>_
+There are no safety requirements.
 
 ### 5.3 Security Requirements  
-_<Specify any requirements regarding security or privacy issues surrounding use of the product or protection of the data used or created by the product. Define any user identity authentication requirements. Refer to any external policies or regulations containing security issues that affect the product. Define any security or privacy certifications that must be satisfied.>_
+There are no security requirements. The program has no database, no user information, or any private information that could be used to compromise an individual.
 
 ### 5.4 Software Quality Attributes  
-_<Specify any additional quality characteristics for the product that will be important to either the customers or the developers. Some to consider are: adaptability, availability, correctness, flexibility, interoperability, maintainability, portability, reliability, reusability, robustness, testability, and usability. Write these to be specific, quantitative, and verifiable when possible. At the least, clarify the relative preferences for various attributes, such as ease of use over ease of learning.>_
+The program shall run smoothly and give the user a somewhat enjoyable experience playing chess at a basic level.
 
 ### 5.5 Business Rules  
-_<List any operating principles about the product, such as which individuals or roles can perform which functions under specific circumstances. These are not functional requirements in themselves, but they may imply certain functional requirements to enforce the rules.>_
+There are no business rules.
 
 ## 6. Other Requirements  
 _<Define any other requirements not covered elsewhere in the SRS. This might include database requirements, internationalization requirements, legal requirements, reuse objectives for the project, and so on. Add any new sections that are pertinent to the project.>_
