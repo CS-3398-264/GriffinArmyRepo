@@ -1,7 +1,7 @@
 # Software Requirements Specification
 ### for
-## (Project Title)
+## Griffin Chess
 ### Version 1.0 approved
 ### Prepared by Nick Kasten, Brandon C. Alfred, Mario Rodriguez, Alejandro...
 #### Griffin Army
-#### (Date Created)
+#### February 7th, 2018
