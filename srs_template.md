@@ -67,6 +67,7 @@ The interface shall also provide an option button for a second player or compute
 
 
 ![Figures](./Figures/1.PNG)
+![Figures](./Figures/2.PNG)
 
 ### 4.2 Difficulty level 
 4.2.1 Description
@@ -77,6 +78,9 @@ The greeting interface should allow the user to change the difficulty level of t
 As shown in Figure 3, when the user is in the game, a button in the right top corner of the UI window during the game when clicked should open a page with the Griffin Game of Chess rules. The rule FAQ should open a link or list of official chest rules to play Griffin Chess. 
 
 
+
+
+![Figures](./Figures/3.PNG)
 ### 4.4 Music Player
 4.4.1 Description
 While in game is in progress, the user should be able to play music from the embedded music player as shown in Figure 3. The user should not be allowed to add music tracks. The music player will contain the default play/pause, and skip functions for the ease of control of the player.  
