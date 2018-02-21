@@ -1,13 +1,16 @@
 ## 1. Introduction
 
 ### 1.1 Purpose 
-This product shall provide the user with a reliable, well designed chess game. The version of this product is 1.0 and this SRS shall cover the full scope of the chess game.
+Griffin Chess shall provide the user with a reliable, well designed chess game. The version of this product is 1.0 and this SRS shall cover the full scope of the chess game.
 
 ### 1.2 Document Conventions
-(This is where any definitions, acronyms, and abbreviations would be)
+* Definitions
+* Acronyms
+  * GC: Griffin Chess
+  * IDE: Integrated Development Environment
 
 ### 1.3 Product Scope
-This chess game is developed entirely in Java and can be launched using a basic Java supported IDE such as Eclipse. This entire project will be available on GitHub.
+Griffin Chess is developed entirely in Java and can be launched using a basic Java supported IDE such as Eclipse. This entire project will be available on GitHub.
 
 ### 1.4 References
 “Laws of Chess: For competitions starting before 1 July 2014.” World Chess Federation - FIDE, www.fide.com/component/handbook/?id=124&view=article.
