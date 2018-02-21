@@ -67,6 +67,10 @@ The interface shall also provide an option button for a second player or compute
 
 
 ![Figures](./Figures/1.PNG)
+
+
+
+
 ![Figures](./Figures/2.PNG)
 
 ### 4.2 Difficulty level 
