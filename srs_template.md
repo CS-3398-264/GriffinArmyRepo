@@ -61,7 +61,7 @@ When the user runs the program, a login interface shall be greeted to create a u
 The interface shall also provide an option button for a second player or computer opponent after the first user name is created. The game of chess shall consist of two different players in the game. 
 1. Player / Guest 
 2. Computer A.I 
-
+![Figures](./Figures/1.png)
 
 ### 4.2 Difficulty level 
 4.2.1 Description
