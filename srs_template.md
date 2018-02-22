@@ -83,25 +83,55 @@ Since our game will be written in Java, which is executed in a virtual machine, 
 While the user will interact with the game through the GUI front end, the core mechanics will be operating in a loosely coupled back-end and will follow a Model-View-Controller pattern. The game state, logic, and user interactions will be kept seperate from the classes that display them, which will allow us to offer users different display options in the future and will allow the teams to write more maintainable, encapsulated code.
 
 ## 4. System Features
-_<This template illustrates organizing the functional requirements for the product by system features, the major services provided by the product. You may prefer to organize this section by use case, mode of operation, user class, object class, functional hierarchy, or combinations of these, whatever makes the most logical sense for your product.>_
 
-### 4.1 System Feature 1
-**<Don’t really say “System Feature 1.” State the feature name in just a few words.>**  
 
-4.1.1	Description and Priority  
-_<Provide a short description of the feature and indicate whether it is of High, Medium, or Low priority. You could also include specific priority component ratings, such as benefit, penalty, cost, and risk (each rated on a relative scale from a low of 1 to a high of 9).>_  
+### 4.1 Greeting User Interface
+4.1.1 Description
+When the user runs the program, a login interface shall be greeted to create a username for the chess game in the input field. The default username is Guest if no username is entered. 
+The interface shall also provide an option button for a second player or computer opponent after the first user name is created. The game of chess shall consist of two different players in the game. 
+1. Player / Guest 
+2. Computer A.I 
 
-4.1.2	Stimulus/Response Sequences  
-_<List the sequences of user actions and system responses that stimulate the behavior defined for this feature. These will correspond to the dialog elements associated with use cases.>_  
 
-4.1.3	Functional Requirements  
-_<Itemize the detailed functional requirements associated with this feature. These are the software capabilities that must be present in order for the user to carry out the services provided by the feature, or to execute the use case. Include how the product should respond to anticipated error conditions or invalid inputs. Requirements should be concise, complete, unambiguous, verifiable, and necessary. Use “TBD” as a placeholder to indicate when necessary information is not yet available.>_
 
-**<Each requirement should be uniquely identified with a sequence number or a meaningful tag of some kind.>**  
 
-  REQ-1:  
-  REQ-2:  
-### 4.2 System Feature 2 (and so on)
+
+![Figures](./Figures/1.PNG)
+
+
+
+
+![Figures](./Figures/2.PNG)
+
+### 4.2 Difficulty level 
+4.2.1 Description
+The greeting interface should allow the user to change the difficulty level of the A.I opponent. In figure 2, Shows there should be three levels of difficulty, easy, medium, and hard. The default level will be easy. Hard difficulty will maximize the A.I. efficiency to win the game.  
+
+### 4.3 Game Rules / Beginner help FAQ 
+4.3.1 Description
+As shown in Figure 3, when the user is in the game, a button in the right top corner of the UI window during the game when clicked should open a page with the Griffin Game of Chess rules. The rule FAQ should open a link or list of official chest rules to play Griffin Chess. 
+
+
+
+
+![Figures](./Figures/3.PNG)
+### 4.4 Music Player
+4.4.1 Description
+While in game is in progress, the user should be able to play music from the embedded music player as shown in Figure 3. The user should not be allowed to add music tracks. The music player will contain the default play/pause, and skip functions for the ease of control of the player.  
+
+### 4.5 Day/Night Mode
+4.5.1 Description
+The overall U.I theme should be able to change for the comfort of the user due to eyestrain. The default theme when Griffin Chess opens is the day mode U.I. The colors for day mode are visibly brighter for use in bright conditions. Night mode changes the U.I colors to visibly darker colors to decrease the chance of eyestrain. The user should have the option to toggle between either day or night mode while in progress of the game. 
+
+### 4.6 Save Screenshot 
+4.6.1 Description
+While in progress of the game, the user should have a button to click for a screenshot of the game window. This screenshot could then be downloaded if the user wants. 
+
+### 4.7 Interactive Game Moves
+4.7.1 Description
+The user should be shown the possible move outcomes with the piece that is chosen. The intergraded A.I should help with the outcomes regardless if there is a human or A.I opponent. The U.I should display a notification on the board to interact with the user. If a move has the outcome of a piece capture, the U.I will display a ‘X’ over the piece that will be captured.
+
+
 
 ## 5. Other Nonfunctional Requirements
 
