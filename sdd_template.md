@@ -5,7 +5,7 @@ _<This template serves as a basis for a Software Design Specification.  As in th
 ### 1.1 Purpose
 
 ### 1.2 System Overview
-_<Brief high-level description of system structure, functionality, interactions with external systems, system issues, etc.>_
+Griffin Chess will be written in Java following the Model-View-Controller pattern. This will enable us to seperate the internal state of the application from the class that present that information and interact with the user. The code will take advantage of various design paterns including [LIST DESIGN PATTERNS HERE]. Interfaces and abstract classes will be used to maximize code reuse and streamline the development process.
 
 ### 1.3 Definitions, Acronyms and Abbreviations
 _<List any project definitions and acronyms introduced to the project by this design.>_
@@ -16,9 +16,12 @@ _<Note any references or related materials here.>_
 ### 1.5 Document Overview
 
 ## 2. Architecture
+* cleaned up version of our whiteboard class diagram
+
 _<The architecture provides the top level design view of a system and provides a basis for more detailed design work. This is the section where you should include your High-Level design Component Diagram.>_
 
 ### 2.1 Overview
+* state diagram
 _<This section provides a high level overview of the structural and functional decomposition of the system. Focus on how and why the system was decomposed in a particular way rather than on details of the particular components. Include information on the major responsibilities and roles that the system (or portions of it) must play.>_
 
 ### 2.2 Component 1..n
