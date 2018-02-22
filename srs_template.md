@@ -1,10 +1,9 @@
 ## 1. Introduction
 
 ### 1.1 Purpose 
-Griffin Chess shall provide the user with a reliable, well designed chess game. The version of this product is 1.0 and this SRS shall cover the full scope of the chess game.
+The purpose of this document is to provide a detailed requirements overview for the Griffin Chess application. It will also explain the purpose and features. Griffin Chess shall provide the user with a reliable, well designed chess game. The version of this product is 1.0 and this SRS shall cover the full scope of the chess game.
 
 ### 1.2 Document Conventions
-* Definitions
 * Acronyms
   * GC: Griffin Chess
   * IDE: Integrated Development Environment
@@ -39,11 +38,11 @@ The expected user simply is anyone with access to a computer. There are no privi
 ### 2.4 Operating Environment
 This will be a Java based application, so the user must have installed the Java environment in their computer. 
 
-### 2.6 User Documentation
+### 2.5 User Documentation
 A section with the Chess rules will be included, along with some initial basic tips to give the user a good idea on how to start playing chess. 
 (Aside, in case there are any bugs that were not able to be fixed at time of product delivery, perhaps to include and list of possible workarounds?)
 
-### 2.7 Assumptions and Dependencies
+### 2.6 Assumptions and Dependencies
 Since this will be a standalone application, there will not be any other dependencies aside the requirement of having the Java environment installed in the computer. 
 
 ## 3. External Interface Requirements
