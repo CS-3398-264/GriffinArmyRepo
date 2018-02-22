@@ -18,8 +18,6 @@ Griffin Chess is developed entirely in Java and can be launched using a basic Ja
 ## 2. Overall Description
 
 ### 2.1 Product Perspective
-_<Describe the context and origin of the product being specified in this SRS. For example, state whether this product is a follow-on member of a product family, a replacement for certain existing systems, or a new, self-contained product. If the SRS defines a component of a larger system, relate the requirements of the larger system to the functionality of this software and identify interfaces between the two. A simple diagram that shows the major components of the overall system, subsystem interconnections, and external interfaces can be helpful.>_
-
 The product is a java based stand alone application for a Chess game. The system provides simple mechanism for users to play against an opponent in a game of chess.
 The following are the main features that are included in the game.
 1/2 player: The user can play against the computer, or against a second player.
@@ -28,8 +26,6 @@ User account: The system allows the user to create their accounts in the system,
 Tips/How to play: A section that includes an explanation of the basic rules of chess, along with some tips to get the user started.
 
 ### 2.2 Product Functions
-_<Summarize the major functions the product must perform or must let the user perform. Details will be provided in Section 3, so only a high level summary (such as a bullet list) is needed here. Organize the functions to make them understandable to any reader of the SRS. A picture of the major groups of related requirements and how they relate, such as a top level data flow diagram or object class diagram, is often effective.>_
-
 Let the user choose options from a menu, which are: 
    Single player -> Start a game of chess against a computer: Difficulty selection is also available here
    Two-player (if it's one of the features we'll implement) -> Start a game of chess with two players
@@ -38,27 +34,16 @@ Let the user choose options from a menu, which are:
  
 
 ### 2.3 User Classes and Characteristics
-_<Identify the various user classes that you anticipate will use this product. User classes may be differentiated based on frequency of use, subset of product functions used, technical expertise, security or privilege levels, educational level, or experience. Describe the pertinent characteristics of each user class. Certain requirements may pertain only to certain user classes. Distinguish the most important user classes for this product from those who are less important to satisfy.>_
-
 The expected user simply is anyone with access to a computer. There are no privilege levels/educational level/expertise nor experience required. The user is not expected to know Chess, as the rules and tips/strategies will be included in the application.
 
 ### 2.4 Operating Environment
-_<Describe the environment in which the software will operate, including the hardware platform, operating system and versions, and any other software components or applications with which it must peacefully coexist.>_
-
 This will be a Java based application, so the user must have installed the Java environment in their computer. 
 
-### 2.5 Design and Implementation Constraints
-_<Describe any items or issues that will limit the options available to the developers. These might include: corporate or regulatory policies; hardware limitations (timing requirements, memory requirements); interfaces to other applications; specific technologies, tools, and databases to be used; parallel operations; language requirements; communications protocols; security considerations; design conventions or programming standards (for example, if the customer’s organization will be responsible for maintaining the delivered software).>_
-
 ### 2.6 User Documentation
-_<List the user documentation components (such as user manuals, on-line help, and tutorials) that will be delivered along with the software. Identify any known user documentation delivery formats or standards.>_
-
 A section with the Chess rules will be included, along with some initial basic tips to give the user a good idea on how to start playing chess. 
 (Aside, in case there are any bugs that were not able to be fixed at time of product delivery, perhaps to include and list of possible workarounds?)
 
 ### 2.7 Assumptions and Dependencies
-_<List any assumed factors (as opposed to known facts) that could affect the requirements stated in the SRS. These could include third-party or commercial components that you plan to use, issues around the development or operating environment, or constraints. The project could be affected if these assumptions are incorrect, are not shared, or change. Also identify any dependencies the project has on external factors, such as software components that you intend to reuse from another project, unless they are already documented elsewhere (for example, in the vision and scope document or the project plan).>_
-
 Since this will be a standalone application, there will not be any other dependencies aside the requirement of having the Java environment installed in the computer. 
 
 ## 3. External Interface Requirements
@@ -132,7 +117,6 @@ While in progress of the game, the user should have a button to click for a scre
 The user should be shown the possible move outcomes with the piece that is chosen. The intergraded A.I should help with the outcomes regardless if there is a human or A.I opponent. The U.I should display a notification on the board to interact with the user. If a move has the outcome of a piece capture, the U.I will display a ‘X’ over the piece that will be captured.
 
 
-
 ## 5. Other Nonfunctional Requirements
 
 ### 5.1 Performance Requirements  
@@ -149,15 +133,3 @@ The program shall run smoothly and give the user a somewhat enjoyable experience
 
 ### 5.5 Business Rules  
 There are no business rules.
-
-## 6. Other Requirements  
-_<Define any other requirements not covered elsewhere in the SRS. This might include database requirements, internationalization requirements, legal requirements, reuse objectives for the project, and so on. Add any new sections that are pertinent to the project.>_
-
-## Appendix A: Glossary  
-_<Define all the terms necessary to properly interpret the SRS, including acronyms and abbreviations. You may wish to build a separate glossary that spans multiple projects or the entire organization, and just include terms specific to a single project in each SRS.>_
-
-## Appendix B: Analysis Models  
-_<Optionally, include any pertinent analysis models, such as data flow diagrams, class diagrams, state-transition diagrams, or entity-relationship diagrams.>_  
-
-## Appendix C: To Be Determined List  
-_<Collect a numbered list of the TBD (to be determined) references that remain in the SRS so they can be tracked to closure.>_
