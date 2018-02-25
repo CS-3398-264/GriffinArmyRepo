@@ -3,6 +3,8 @@ _<This template serves as a basis for a Software Design Specification.  As in th
 ## 1. Introduction
 
 ### 1.1 Purpose
+This document contains the system design description for the Griffin Chess App. Included are the Architectural design and features of the MVC classes, interactions and details of how each class performs. This document will also show how the use cases that were detailed in the SRS are to be implemented using this design pattern.
+Primary audiences for this document are the software developers. 
 
 ### 1.2 System Overview
 Griffin Chess will be written in Java following the Model-View-Controller pattern. This will enable us to seperate the internal state of the application from the class that present that information and interact with the user. The code will take advantage of various design paterns including [LIST DESIGN PATTERNS HERE]. Interfaces and abstract classes will be used to maximize code reuse and streamline the development process.
