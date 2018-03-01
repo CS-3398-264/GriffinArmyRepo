@@ -5,30 +5,27 @@ Table of Contents
   1.2	Document Conventions	  
   1.3	Intended Audience and Reading Suggestions	  
   1.4	Product Scope	  
-  1.5	Reference	1
-2.	Overall Description	  
+  1.5	Reference	
+2.	Architecture	  
   2.1	Product Perspective	  
   2.2	Product Functions	  
   2.3	User Classes and Characteristics	  
   2.4	Operating Environment	  
-  2.5	Design and Implementation Constraints	  
-  2.6	User Documentation	  
-  2.7	Assumptions and Dependencies	  
+  2.5	User Documentation	  
+  2.6	Assumptions and Dependencies	  	  
 3. 	External Interface Requirements	  
   3.1	User Interfaces	  
   3.2	Hardware Interfaces	  
-  3.3	Software Interfaces	  
-  3.4	Communications Interface	
 4.	System Features	  
-  4.1	System Feature 1	  
-  4.2	System Feature 2 (and so on)
-5.	Other Nonfunctional Requirements	  
-  5.1	Performance Requirements	  
-  5.2	Safety Requirements	  
-  5.3	Security Requirements	  
-  5.4	Software Quality Attributes	  
-  5.5	Business Rules	
-6.	Other Requirements  
-Appendix A: Glossary  
-Appendix B: Analysis Models  
-Appendix C: To Be Determined List	
+  4.1 Greeting User Interface	  
+  4.2 Difficulty level	  
+  4.3 Game Rules / Beginner help FAQ	  
+  4.4 Music Player	  
+  4.5 Day/Night Mode	  
+  4.6 Interactive Game Moves	  
+5. System Features	  
+  5.1 Performance Requirements	  
+  5.2 Safety Requirements	  
+  5.3 Security Requirements	  
+  5.4 Software Quality Attributes	  
+  5.5 Business Rules	  
