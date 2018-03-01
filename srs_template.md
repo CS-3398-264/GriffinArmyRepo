@@ -13,7 +13,7 @@ The purpose of this document is to provide a detailed requirements overview for 
 ### 1.3 Product Scope
 > JD: I would expect you can launch it without an IDE, and just the JRE.   You can also put the github URL here
 
-Griffin Chess is developed entirely in Java and can be launched using a basic Java supported IDE such as Eclipse. This entire project will be available on GitHub.
+Griffin Chess is developed entirely in Java and can be launched on a system that supports the JRE. This entire project will be available on GitHub.
 
 ### 1.4 References
 “Laws of Chess: For competitions starting before 1 July 2014.” World Chess Federation - FIDE, www.fide.com/component/handbook/?id=124&view=article.
