@@ -86,11 +86,6 @@ Once a game has begun, the user will be shown a top down view of a chessboard wi
 
 Since our game will be written in Java, which is executed in a virtual machine, we will not need to interface directly with any hardware. Any type of hardware that is able to run and support the JVM should be able to run the executable JAR files for this game.
 
-### 3.3 Software Interfaces
->JD: This section isn't needed unless you are communicating with other software.  You could argue that you interface with the JVM, but its not really relevant to the user.  What you have here is SDD stuff.
-
-While the user will interact with the game through the GUI front end, the core mechanics will be operating in a loosely coupled back-end and will follow a Model-View-Controller pattern. The game state, logic, and user interactions will be kept separate from the classes that display them, which will allow us to offer users different display options in the future and will allow the teams to write more maintainable, encapsulated code.
-
 ## 4. System Features
 
 
