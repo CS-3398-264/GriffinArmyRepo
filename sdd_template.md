@@ -46,10 +46,66 @@ Section 4 contains several Use Cases that represent the most vital functions of 
 
 While the user will interact with the game through the GUI front end, the core mechanics will be operating in a loosely coupled back-end and will follow a Model-View-Controller pattern. The game state, logic, and user interactions will be kept separate from the classes that display them, which will allow us to offer users different display options in the future and will allow the teams to write more maintainable, encapsulated code.
 
-### 2.2 `App` Component 
+### 2.2.1 `App` Class 
 _<Describe an element (subsystem, component, etc...) from architecture in further detail. When appropriate, include information on how the element is further broken down and the interactions and relationships between these subcomponents.>_
 
-The App class acts as the Model in the MVC architecture and maintains the state of the board.
+The `App` class acts as the Model in the MVC architecture and maintains the currently selected options.
+
+### 2.2.2 `Board` Class
+
+The `Board` class maintains the state of the board and the location. The Board class extends the Observable class in order to take advantage of the Observer/Observable pattern and keeps its observers constantly updated with the most current version of the board.
+
+### 2.2.3 `aPiece` Class
+
+The abstract `aPiece` class contains the implementation of functions that are relevant to all pieces.
+
+### 2.2.4 `Pawn` Class
+
+The `Pawn` extends the `aPiece` class and initializes individual pawn pieces and provides functions for the characteristics of the pawn.
+
+### 2.2.5 `Piece` Interface
+
+The `Piece` interface provides function declarations that are relevant to all pieces.
+
+### 2.2.6 `Human` Class
+
+The `Human` class implements `Player` and creates a player and initializes the pieces.
+
+### 2.2.7 `Player` Interface
+
+The `Player` interface provides function declarations that are relevant to all players.
+
+### 2.2.8 `Cell` Class
+
+The `Cell` class extends `JButton` and initializes the characteristics of each cell on the chess board and specifies colors for the varying moves of the chess pieces and the natural color of the cells of the board.
+
+### 2.2.9 `GUI` Class
+
+The `GUI` class instantiates the View and graphics.
+
+### 2.2.10 `Main` Class
+
+The `Main` class holds the location of main() and instantiates the application.
+
+### 2.2.11 `aWindow` Class
+
+The `aWindow` class provides characteristics and functions that are common to all unique windows.
+
+### 2.2.12 `BoardWindow` Class
+
+The `BoardWindow` extends the `aWindow` class and provides characteristics and functions unique to the board.
+
+### 2.2.13 `MenuWindow` Class 
+
+The `MenuWindow` extends the `aWindow` class and provides characteristics and functions unique to the menu.
+
+### 2.2.14 `OptionsWindows` Class
+
+The `OptionsWindow` class extends `aWindow` and provides characteristics and functions unique to the options.
+
+
+
+
 
 ![image](./images/class-breakdowns/app.png)
 
