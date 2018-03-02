@@ -25,25 +25,24 @@ Griffin Chess is developed entirely in Java and can be launched on a system that
 
 The product is a java based stand alone application for a Chess game. The system provides simple mechanism for users to play against an opponent in a game of chess.
 The following are the main features that are included in the game.
-1/2 player: The user can play against the computer, or against a second player.
-Difficulty: If playing 1-player, the user can select varying AI difficulty
-User account: The system allows the user to create their accounts in the system, along with profile view.
+1/2 player: The game provides the options to play against an A.I., or a second player.
+Difficulty: Varying A.I. difficulty settings shall be available.
 Tips/How to play: A section that includes an explanation of the basic rules of chess, along with some tips to get the user started.
 
 ### 2.2 Product Functions
 > JD: "Let the user" -> make this a clear system requirement.  "(if it's one of the features we'll implement)" -> Just make it a requirement.  If you don't get it implemented, that's fine, you just don't get an extra point in that section for it.  For now we will assume you will try to do them all.
 
-Let the user choose options from a menu, which are: 
+The following options shall be available in a starting menu: 
    Single player -> Start a game of chess against a computer: Difficulty selection is also available here
    Two-player (if it's one of the features we'll implement) -> Start a game of chess with two players
-   Account -> Let user see their account info (history/settings/scores/etc)
+   Night/Day mode -> This option shall change the color layout of the board.
    Tips/How to play -> display a list of tips/how-to-play manual
  
 
 ### 2.3 User Classes and Characteristics
 > JD: I like that you will be providing instruction to the user, so a novice to chess can play.  You might want to clarify the first sentence though.  Not _ANY_ computer will work...
 
-The expected user simply is anyone with access to a computer. There are no privilege levels/educational level/expertise nor experience required. The user is not expected to know Chess, as the rules and tips/strategies will be included in the application.
+The expected user shall be anyone with access to a computer which can run the JRE. There are no privilege levels/educational level/expertise nor experience required. The user is not expected to know Chess, as the rules and tips/strategies shall be included in the application.
 
 ### 2.4 Operating Environment
 > JD: Which Java version?  You need to set a minimum.
@@ -53,7 +52,7 @@ This will be a Java based application, so the user must have installed the Java 
 ### 2.5 User Documentation
 > JD: A section of what?  If you do have bug workarounds, just let me know when you submit the papers/code (which will be a repo clone, btw).
 
-A section with the Chess rules will be included, along with some initial basic tips to give the user a good idea on how to start playing chess. 
+The Chess rules will be included within the game, along with some initial basic tips to give the user a good idea on how to start playing chess. 
 (Aside, in case there are any bugs that were not able to be fixed at time of product delivery, perhaps to include and list of possible workarounds?)
 
 ### 2.6 Assumptions and Dependencies
@@ -138,46 +137,43 @@ The interface shall provide an option button for a second player or computer opp
 
 ### 4.2 Difficulty level 
 4.2.1 Description
-The greeting interface should allow the user to change the difficulty level of the A.I opponent. In figure 2, Shows there should be three levels of difficulty, easy, medium, and hard. The default level will be easy. Hard difficulty will maximize the A.I. efficiency to win the game.  
+The greeting interface shall allow the user to change the difficulty level of the A.I opponent. In figure 2, Shows there shall be three levels of difficulty, easy, medium, and hard. The default level will be easy. Hard difficulty will maximize the A.I. efficiency to win the game.  
 
 ### 4.3 Game Rules / Beginner help FAQ 
 4.3.1 Description
 As shown in Figure 3, when the user is in the game, a button in the right top corner of the UI window during the game when clicked should open a page with the Griffin Game of Chess rules. The rule FAQ should open a link or list of official chest rules to play Griffin Chess. 
 
+![Figures](./Figures/Day-mode.jpg)
+
+
+![Figures](./Figures/Night-mode.jpg)
 
 
 
-![Figures](./Figures/3.PNG)
-### 4.4 Music Player
->JD: Interesting and cool idea.  However you really don't say anything about how this will work?  User can not add music?  Will you only play music that ships with the game? How do I bring up the player controls?  Please add detail
-
+### 4.4 Day/Night Mode
 4.4.1 Description
-While in game is in progress, the user should be able to play music from the embedded music player as shown in Figure 3. The user should not be allowed to add music tracks. The music player will contain the default play/pause, and skip functions for the ease of control of the player.  
-
-### 4.5 Day/Night Mode
-4.5.1 Description
 >JD: Good idea, a picture would help a lot here.  How does the user access this?  Please detail.
 
-The overall U.I theme should be able to change for the comfort of the user due to eyestrain. The default theme when Griffin Chess opens is the day mode U.I. The colors for day mode are visibly brighter for use in bright conditions. Night mode changes the U.I colors to visibly darker colors to decrease the chance of eyestrain. The user should have the option to toggle between either day or night mode while in progress of the game. 
+The overall U.I theme should be able to change for the comfort of the user due to eyestrain. The default theme when Griffin Chess opens is the day mode U.I. The colors for day mode are visibly brighter for use in bright conditions. Night mode changes the U.I colors to visibly darker colors to decrease the chance of eyestrain. As meantioned in Section 3.1, the user should have the option to toggle between either day or night mode while in progress of the game by clicking the option menu button. 
 
-### 4.6 Interactive Game Moves
-4.7.1 Description
-The user should be shown the possible move outcomes with the piece that is chosen. The intergraded A.I should help with the outcomes regardless if there is a human or A.I opponent. The U.I should display a notification on the board to interact with the user. If a move has the outcome of a piece capture, the U.I will display a ‘X’ over the piece that will be captured.
+### 4.5 Interactive Game Moves
+4.5.1 Description
+The user shall be shown the possible move outcomes with the piece that is chosen. The intergraded A.I should help with the outcomes regardless if there is a human or A.I opponent. The U.I should display a notification on the board to interact with the user. If a move has the outcome of a piece capture, the U.I will display a ‘X’ over the piece that will be captured.
 
 
 ## 5. Other Nonfunctional Requirements
 
 ### 5.1 Performance Requirements  
-The program shall not crash. Other than that, there are not any specific performance requirements. The time complexity and space complexity have not been specified. The overall goal is to get the program running without any bugs or user-related problems.
+Griffin Chess shall not crash. Other than that, there are not any specific performance requirements. The time complexity and space complexity have not been specified. The overall goal shall be to get the program running without any bugs or user-related problems.
 
 ### 5.2 Safety Requirements  
 There are no safety requirements.
 
 ### 5.3 Security Requirements  
-There are no security requirements. The program has no database, no user information, or any private information that could be used to compromise an individual.
+There are no security requirements. Griffin Chess has no database, no user information, or any private information that could be used to compromise an individual.
 
 ### 5.4 Software Quality Attributes  
-The program shall run smoothly and give the user a somewhat enjoyable experience playing chess at a basic level.
+Griffin Chess shall run smoothly and give the user a somewhat enjoyable experience playing chess at a basic level.
 
 ### 5.5 Business Rules  
 There are no business rules.
