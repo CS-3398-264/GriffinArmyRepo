@@ -51,7 +51,7 @@ _<Describe an element (subsystem, component, etc...) from architecture in furthe
 
 The App class acts as the Model in the MVC architecture and maintains the state of the board.
 
-![image](./images/class breakdowns/app.png)
+![image](./images/class-breakdowns/app.png)
 
 ## 3. High-Level Design
 * **diagram of model/view interactivity (or something) here**
