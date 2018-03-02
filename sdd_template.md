@@ -50,6 +50,8 @@ While the user will interact with the game through the GUI front end, the core m
 ### 2.2 `App` Component 
 _<Describe an element (subsystem, component, etc...) from architecture in further detail. When appropriate, include information on how the element is further broken down and the interactions and relationships between these subcomponents.>_
 
+The App class acts as the Model in the MVC architecture and maintains the state of the board.
+
 ![image](./images/app.png)
 
 ## 3. High-Level Design
