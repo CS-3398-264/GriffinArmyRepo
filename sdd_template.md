@@ -63,8 +63,10 @@ _<The architecture provides the top level design view of a system and provides a
 _<This section provides a high level overview of the structural and functional decomposition of the system. Focus on how and why the system was decomposed in a particular way rather than on details of the particular components. Include information on the major responsibilities and roles that the system (or portions of it) must play.>_    
 While the user will interact with the game through the GUI front end, the core mechanics will be operating in a loosely coupled back-end and will follow a Model-View-Controller pattern. The game state, logic, and user interactions will be kept separate from the classes that display them, which will allow us to offer users different display options in the future and will allow the teams to write more maintainable, encapsulated code.
 
-### 2.2 Component 1..n
+### 2.2 `App` Component 
 _<Describe an element (subsystem, component, etc...) from architecture in further detail. When appropriate, include information on how the element is further broken down and the interactions and relationships between these subcomponents.>_
+
+![image](./images/app.png)
 
 ## 3. High-Level Design
 _<This section describes in further detail elements discussed in the Architecture. Normally this section would be split into separate documents for different areas of the design.>_
