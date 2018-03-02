@@ -42,7 +42,6 @@ The following options shall be available in a starting menu:
 The expected user shall be anyone with access to a computer which can run the JRE. There are no privilege levels/educational level/expertise nor experience required. The user is not expected to know Chess, as the rules and tips/strategies shall be included in the application.
 
 ### 2.4 Operating Environment
-> JD: Which Java version?  You need to set a minimum.
 
 This will be a Java based application, so the user must have JRE 1.8.0_161.
 
