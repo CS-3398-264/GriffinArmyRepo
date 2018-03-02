@@ -1,5 +1,3 @@
->JD: Overall, a good start.  Please review the document for any "shall, will, should, may, must, can, etc.", these all imply a requirement, and there are numerous misses throughout the document. Many of the requirements are placed on the user.  Also, as noted below, section 3 and 4 are the guts of the document and need detail.  I love the MD format, by the way.
-
 ## 1. Introduction
 
 ### 1.1 Purpose 
@@ -11,8 +9,6 @@ The purpose of this document is to provide a detailed requirements overview for 
   * IDE: Integrated Development Environment
 
 ### 1.3 Product Scope
-> JD: I would expect you can launch it without an IDE, and just the JRE.   You can also put the github URL here
-
 Griffin Chess is developed entirely in Java and can be launched on a system that supports the JRE. This entire project will be available on GitHub.
 
 ### 1.4 References
@@ -35,7 +31,6 @@ The following options shall be available in a starting menu:
    Two-player (if it's one of the features we'll implement) -> Start a game of chess with two players
    Night/Day mode -> This option shall change the color layout of the board.
    Tips/How to play -> display a list of tips/how-to-play manual
- 
 
 ### 2.3 User Classes and Characteristics
 
@@ -113,7 +108,6 @@ Griffin Chess shall require no specific hardware other than a mouse for input, a
 
 
 ### 4.1 Greeting User Interface
-> JD: A login... hmm, what will this be used for?  This is the only time you mention it.
 
 4.1.1 Description
 The interface shall provide an option button for a second player or computer opponent after the first user name is created. The game of chess shall consist of two different players in the game. 
@@ -130,6 +124,12 @@ The greeting interface shall allow the user to change the difficulty level of th
 4.3.1 Description
 As shown in Figure 3, when the user is in the game, a button in the right top corner of the UI window during the game when clicked should open a page with the Griffin Game of Chess rules. The rule FAQ should open a link or list of official chest rules to play Griffin Chess. 
 
+### 4.4 Day/Night Mode
+4.4.1 Description
+
+The overall U.I theme should be able to change for the comfort of the user due to eyestrain. The default theme when Griffin Chess opens is the day mode U.I. The colors for day mode are visibly brighter for use in bright conditions. Night mode changes the U.I colors to visibly darker colors to decrease the chance of eyestrain. As meantioned in Section 3.1, the user should have the option to toggle between either day or night mode while in progress of the game by clicking the option menu button. 
+
+
 ![Figures](./Figures/Day-mode.jpg)
 
 
@@ -140,12 +140,6 @@ Figure 3. Day mode feature.
 
 Figure 4. Night mode feature. 
 
-
-### 4.4 Day/Night Mode
-4.4.1 Description
->JD: Good idea, a picture would help a lot here.  How does the user access this?  Please detail.
-
-The overall U.I theme should be able to change for the comfort of the user due to eyestrain. The default theme when Griffin Chess opens is the day mode U.I. The colors for day mode are visibly brighter for use in bright conditions. Night mode changes the U.I colors to visibly darker colors to decrease the chance of eyestrain. As meantioned in Section 3.1, the user should have the option to toggle between either day or night mode while in progress of the game by clicking the option menu button. 
 
 ### 4.5 Interactive Game Moves
 4.5.1 Description
