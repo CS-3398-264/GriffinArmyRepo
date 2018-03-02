@@ -21,12 +21,13 @@ Griffin Chess shall be written in Java following the Model-View-Controller patte
 |Player|The user/A.I. that moves the pieces on the board to play the game.|
 
 ### 1.4 Supporting Materials
-* FIDE Laws of Chess
+1. FIDE Laws of Chess
   * www.fide.com/component/handbook/?id=124&view=article
-* Guide to building a simple chess A.I.by Lauri Hartikka, March 30, 2017.
+2. Guide to building a simple chess A.I.by Lauri Hartikka, March 30, 2017.
   * https://medium.freecodecamp.org/simple-chess-ai-step-by-step-1d55a9266977
-* Software Engineering by Sommerville, 10th Ed. - Chapter 5 System Modeling
-  * MVC Diagram from the book goes here... serves as an outline for the structure of our app
+3. Software Engineering by Sommerville, 10th Ed. - Chapter 6 Architectural Design
+  * MVC Diagram featured in Section 2.1
+  
   
 
 ### 1.5 Document Overview
@@ -42,9 +43,13 @@ Section 4 contains several Use Cases that represent the most vital functions of 
 
 ### 2.1 Overview
 
-![High-Level Class Diagram](./images/high-level-classes.png)
+The following diagram (from Reference Source #3) shows a basic Model-View-Controller Architecture, which shall serve as an outline for the structure of Griffin Chess.
 
-While the user will interact with the game through the GUI front end, the core mechanics will be operating in a loosely coupled back-end and will follow a Model-View-Controller pattern. The game state, logic, and user interactions will be kept separate from the classes that display them, which will allow us to offer users different display options in the future and will allow the teams to write more maintainable, encapsulated code.
+![MVC Diagram](./images/textbook-mvc.png)
+
+While Griffin Chess shall interact with the user through the GUI front end, the core mechanics and game data will be managed by a loosely coupled back-end, following the traditional Model-View-Controller pattern pictured above in the example. The game state, logic, and user interactions will be kept separate from the classes that display them, which will allow us to offer users different display options in the future and will allow the teams to write more maintainable, encapsulated code.
+
+![High-Level Class Diagram](./images/high-level-classes.png)
 
 ### 2.2.1 `App` Class 
 _<Describe an element (subsystem, component, etc...) from architecture in further detail. When appropriate, include information on how the element is further broken down and the interactions and relationships between these subcomponents.>_
