@@ -124,19 +124,25 @@ The user opens the Griffin Chess application and an initial start screen is show
 _<Provide a description and diagrams of a system component or set of components that describes a clearly defined view or model of the entire system or a subset of the system.>_
 
 ## 4. Use Cases
-
-### 4.1 Use-Case 1
+The Use case diagrams give an representation of the most significant scernarios that the player may use. 
+### 4.1 Start Game/Options
 ![Use Case 1](./images/use-case-1.png)
-* description
 
-### 4.2 Use-Case 2
+Description: As Griffin Chess is opened, the player has the choice to start the game immediately. The second choice is the option menu to prompt the user with difficulty level, opponent, and Day/Night mode. 
+
+### 4.2 Move Pieces
 ![Use Case 2](./images/use-case-2.png)
-* description
 
-### 4.3 Use-Case 3
+Description: During game process, the player with the current turn has the option to move the selected piece. 
+
+### 4.3 Choosing of A.I opponent
 ![Use Case 3](./images/use-case-3.png)
-* description
 
-### 4.4 Use-Case 4
+
+Description: The player chooses the A.I as an opponent, starts the game, and while in the game has the option to move the selected piece or quit the game. 
+
+### 4.4 Player vs Player 
 ![Use Case 4](./images/use-case-4.png)
-* description
+
+
+Description: The player 1 starts the game. Player 2 or the A.I joins the game and uses the same game functions as player 1. 
