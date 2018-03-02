@@ -63,51 +63,51 @@ Since this will be a standalone application, there will not be any other depende
 
 ### 3.1 User Interfaces
 
-Griffin Chess shall provide a full-color graphical user interface (GUI) and take input from the mouse. 
+* Griffin Chess shall provide a full-color graphical user interface (GUI) and take input from the mouse. 
 
-Images for the chess pieces themselves shall be sourced from a royalty-free provider and follow a tranditional theme, as in the example below.
+* Images for the chess pieces themselves shall be sourced from a royalty-free provider and follow a tranditional theme, as in the example below.
 
 ![Chess Pieces](./images/vector-pieces.jpg)
 
-From the title screen, Griffin Chess shall offer the choice of going to the **Options** menu or starting a **New Game** by clicking on the appropriate button, similar to the ones seen in this sample design.
+* From the title screen, Griffin Chess shall offer the choice of going to the **Options** menu or starting a **New Game** by clicking on the appropriate button, similar to the ones seen in this sample design.
 
 ![Main Menu](./images/main-menu.gif)
 
-On the **Options** menu, Griffin Chess shall provide buttons that allow users to customize the games appearence, the type of opponent, and the difficulty (these features are described in detail in Section 4).
+* On the **Options** menu, Griffin Chess shall provide buttons that allow users to customize the games appearence, the type of opponent, and the difficulty (these features are described in detail in Section 4).
 
-When the **New Game** button is clicked, a new game of game chess shall begin, with the options the user has selected.
+* When the **New Game** button is clicked, a new game of game chess shall begin, with the options the user has selected.
 
-By defualt, a new game shall be set against an AI-controlled opponent at a "normal" difficulty setting.
+* By defualt, a new game shall be set against an AI-controlled opponent at a "normal" difficulty setting.
 
-Once a game has begun, Griffin Chess shall display a top down view of a chess board with all of the pieces on it, similar to the prototype below.
+* Once a game has begun, Griffin Chess shall display a top down view of a chess board with all of the pieces on it, similar to the prototype below.
 
 ![Chess Board](./images/chess-board.gif) 
 
-On a users turn, Griffin Chess shall allow pieces to be selected by clicking on the piece directly on the chess board.
+* On a users turn, Griffin Chess shall allow pieces to be selected by clicking on the piece directly on the chess board.
 
-When a piece is selected, the square of the board containing it shall become highlighted.
+* When a piece is selected, the square of the board containing it shall become highlighted.
 
-When a piece is selected, the available destinations for that piece shall also become highlighted with a different color, and Griffin Chess shall allow players to click on a highlighted square to select it as their move.
+* When a piece is selected, the available destinations for that piece shall also become highlighted with a different color, and Griffin Chess shall allow players to click on a highlighted square to select it as their move.
 
-Griffin Chess shall indicate a move has been selected by highlighting a chosen square with a third color, as seen in the prototype image below.
+* Griffin Chess shall indicate a move has been selected by highlighting a chosen square with a third color, as seen in the prototype image below.
 
 ![Highlighted Chess Board](./images/highlighted-chess-board.gif)
 
-If a chosen move contains an oppsing players piece, a seperate color shall be used to highlight the square, indication that it can be captured.
+* If a chosen move contains an oppsing players piece, a seperate color shall be used to highlight the square, indication that it can be captured.
 
-Griffin Chess shall provide a **Confirm** button that when clicked, shall accept a players move and advance the game to the next players turn.
+* Griffin Chess shall provide a **Confirm** button that when clicked, shall accept a players move and advance the game to the next players turn.
 
-If a player takes a move that captures an opposing players piece, that piece shall be removed from the board.
+* If a player takes a move that captures an opposing players piece, that piece shall be removed from the board.
 
-If a new piece belonging to the current player is clicked on instead, Griffin Chess shall display the available destinations for that piece, and repeat the process.
+* If a new piece belonging to the current player is clicked on instead, Griffin Chess shall display the available destinations for that piece, and repeat the process.
 
-If an invalid square is clicked, Griffin Chess shall un-highlight and deselect all squares.
+* If an invalid square is clicked, Griffin Chess shall un-highlight and deselect all squares.
 
-Griffin Chess shall impose no time limit on the length of a players turn.
+* Griffin Chess shall impose no time limit on the length of a players turn.
 
-Griffin Chess shall continue to alternate control of the game between the two players until one forfeits or checkmate is acheived, which shall be detected automatically.
+* Griffin Chess shall continue to alternate control of the game between the two players until one forfeits or checkmate is acheived, which shall be detected automatically.
 
-Griffin Chess shall display a message at the end of a game summarizing the results.
+* Griffin Chess shall display a message at the end of a game summarizing the results.
 
 ![Checkmate Chess Board](./images/endgame-board.gif)
 
