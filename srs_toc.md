@@ -2,10 +2,9 @@
 Table of Contents	  
 1. Introduction	  
   1.1	Purpose	  
-  1.2	Document Conventions	  
-  1.3	Intended Audience and Reading Suggestions	  
-  1.4	Product Scope	  
-  1.5	Reference	
+  1.2	Document Conventions	    
+  1.3	Product Scope	  
+  1.4	Reference	
 2.	Architecture	  
   2.1	Product Perspective	  
   2.2	Product Functions	  
@@ -20,9 +19,8 @@ Table of Contents
   4.1 Greeting User Interface	  
   4.2 Difficulty level	  
   4.3 Game Rules / Beginner help FAQ	  
-  4.4 Music Player	  
-  4.5 Day/Night Mode	  
-  4.6 Interactive Game Moves	  
+  4.4 Day/Night Mode	  
+  4.5 Interactive Game Moves	  
 5. System Features	  
   5.1 Performance Requirements	  
   5.2 Safety Requirements	  
