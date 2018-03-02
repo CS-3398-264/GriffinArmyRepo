@@ -121,8 +121,7 @@ Griffin Chess shall require no specific hardware other than a mouse for input, a
 > JD: A login... hmm, what will this be used for?  This is the only time you mention it.
 
 4.1.1 Description
-When the user runs the program, a login interface shall be greeted to create a username for the chess game in the input field. The default username is Guest if no username is entered. 
-The interface shall also provide an option button for a second player or computer opponent after the first user name is created. The game of chess shall consist of two different players in the game. 
+The interface shall provide an option button for a second player or computer opponent after the first user name is created. The game of chess shall consist of two different players in the game. 
 1. Player / Guest 
 2. Computer A.I 
 
@@ -161,13 +160,7 @@ While in game is in progress, the user should be able to play music from the emb
 
 The overall U.I theme should be able to change for the comfort of the user due to eyestrain. The default theme when Griffin Chess opens is the day mode U.I. The colors for day mode are visibly brighter for use in bright conditions. Night mode changes the U.I colors to visibly darker colors to decrease the chance of eyestrain. The user should have the option to toggle between either day or night mode while in progress of the game. 
 
-### 4.6 Save Screenshot 
-4.6.1 Description
->JD: Good idea, but won't the OS default screen capture work?  Please add some detail anyhow, what button will the user click, how will they be able to download a screenshot?  Also, this isn't a web based application, so.. isn't downloading the wrong term?
-
-While in progress of the game, the user should have a button to click for a screenshot of the game window. This screenshot could then be downloaded if the user wants. 
-
-### 4.7 Interactive Game Moves
+### 4.6 Interactive Game Moves
 4.7.1 Description
 The user should be shown the possible move outcomes with the piece that is chosen. The intergraded A.I should help with the outcomes regardless if there is a human or A.I opponent. The U.I should display a notification on the board to interact with the user. If a move has the outcome of a piece capture, the U.I will display a ‘X’ over the piece that will be captured.
 
