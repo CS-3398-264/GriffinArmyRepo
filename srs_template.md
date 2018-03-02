@@ -144,9 +144,13 @@ The greeting interface shall allow the user to change the difficulty level of th
 As shown in Figure 3, when the user is in the game, a button in the right top corner of the UI window during the game when clicked should open a page with the Griffin Game of Chess rules. The rule FAQ should open a link or list of official chest rules to play Griffin Chess. 
 
 ![Figures](./Figures/Day-mode.jpg)
+
+
 Figure 3. Day mode feature. 
 
 ![Figures](./Figures/Night_mode.jpg)
+
+
 Figure 4. Night mode feature. 
 
 
