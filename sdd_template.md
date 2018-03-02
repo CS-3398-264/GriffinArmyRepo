@@ -5,11 +5,9 @@ This document contains the system design description for the Griffin Chess App. 
 Primary audiences for this document are the software developers. 
 
 ### 1.2 System Overview
-Griffin Chess will be written in Java following the Model-View-Controller pattern. This will enable us to seperate the internal state of the application from the class that present that information and interact with the user. The code will take advantage of various design paterns including [LIST DESIGN PATTERNS HERE]. Interfaces and abstract classes will be used to maximize code reuse and streamline the development process.
+Griffin Chess shall be written in Java following the Model-View-Controller pattern. This will enable us to seperate the internal state of the application from the classes that present that information and interact with the user. Griffin Chess shall take advantage of various design paterns including iterators and The Observer/Observable pattern. Interfaces and abstract classes will be utilized to maximize code reuse and streamline the development process with a distributed team.
 
 ### 1.3 Definitions, Acronyms and Abbreviations
-_<List any project definitions and acronyms introduced to the project by this design.>_
-  
 |Term | Definition|
 |:-------|:---------:|
 |A.I.|The algorithm that will play a chess game against the human player.|
@@ -32,12 +30,13 @@ _<List any project definitions and acronyms introduced to the project by this de
   
 
 ### 1.5 Document Overview
->in progress>
+Section 1 contains an outline of the structure of this document, as well as a glossary of terms and list of references used.
 
-Chapter 2 shows the architecture of the program through its various states, and the overall chosen design pattern. The interactions and functions of each elememnt/component/subsystem is detailed down for a broader understanding of the chosen design pattern.
+Section 2 contains diagrams displaying the MVC architecture of Griffin Chess, as well as the makeup and relationship between the different classes that make up the application.
 
-Chapter 3 In this chapter the design patter is broken down into its major elements to provide a high-level view of its functions.
+Section 3 contains a high-level overview of the different states of Griffin Chess and the flow of data between the view and the managed state of the board.
 
+Section 4 contains several Use Cases that represent the most vital functions of Griffin Chess and shows how the user will progress through them and perform each action.
 
 ## 2. Classes and Components
 
