@@ -12,26 +12,18 @@ Griffin Chess will be written in Java following the Model-View-Controller patter
 ### 1.3 Definitions, Acronyms and Abbreviations
 _<List any project definitions and acronyms introduced to the project by this design.>_
   
-  Term	                 Definition
+  Term                    Definition
   
-  A.I.                   The algorithm that will play a chess game against the human player. 
-  
-  A.I. Difficulty        The created sense of increased/decreased difficulty from the A.I.’s algorithm which chooses the best possible 
-                         move.
-                         
-  Available moves        The possible moving patterns and destination cells of a specific chess piece.
-  
-  Draw	                 If both player 1 and player 2 reach a stalemate without any way for either to achieve a winning condition.
-  
-  Check	                 The condition when a player’s king is under threat of capture in the opponent’s next turn.
-  
-  Checkmate	             When the player cannot move out of check. The player on checkmate loses and the game ends.
-  
-  Chess Board            The 8x8 plane where the chess pieces reside, and where they can be moved.
-  
-  Chess Piece	           The items that are used by each player to play chess against the opponent.
-  
-  Player                 The user/A.I. that moves the pieces on the board to play the game.
+  A.I.                    The algorithm that will play a chess game against the human player. 
+  A.I. Difficulty         The created sense of increased/decreased difficulty from the A.I.’s algorithm which chooses the best possible 
+                          move.            
+  Available moves         The possible moving patterns and destination cells of a specific chess piece.  
+  Draw                    If both player 1 and player 2 reach a stalemate without any way for either to achieve a winning condition. 
+  Check                   The condition when a player’s king is under threat of capture in the opponent’s next turn.
+  Checkmate               When the player cannot move out of check. The player on checkmate loses and the game ends.
+  Chess Board             The 8x8 plane where the chess pieces reside, and where they can be moved.
+  Chess Piece             The items that are used by each player to play chess against the opponent.
+  Player                  The user/A.I. that moves the pieces on the board to play the game.
 
 
 ### 1.4 Supporting Materials
@@ -47,7 +39,7 @@ _<Note any references or related materials here.>_
   
 
 ### 1.5 Document Overview
-
+>in progress
 Chapter 2 shows the architecture of the program through its various states, and the overall chosen design pattern. The interactions and functions of each elememnt/component/subsystem is detailed down for a broader understanding of the chosen design pattern.
 
 Chapter 3 In this chapter the design patter is broken down into its major elements to provide a high-level view of its functions.
