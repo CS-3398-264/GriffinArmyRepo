@@ -62,29 +62,57 @@ Since this will be a standalone application, there will not be any other depende
 ## 3. External Interface Requirements
 
 ### 3.1 User Interfaces
-> JD: So this is where SRSes can get tricky.  Indicating Java as a requirement is fine, since the customer might actually do that. Customers might want the portability of Java (which you haven't really indicated as a reason), and so ask for it specifically.  However, customers probably won't tell you that they need you to use Swing.  That means its a design detail that should be in the SDD.  If you think there might be some valid reason a user might specify Swing specifically, put it in here.
 
-The game will provide users with a graphical interface (GUI) and will be controlled via the mouse and keyboard. The graphical elements will be built upon the components provided by the Java Swing framework. The game graphics will be created using Swing and the chess pieces will be based on vector images provided by _uidownload.com_.
+Griffin Chess shall provide a full-color graphical user interface (GUI) and take input from the mouse. 
 
-![Chess Pieces](./vector-pieces.jpg)
+Images for the chess pieces themselves shall be sourced from a royalty-free provider and follow a tranditional theme, as in the example below.
 
+![Chess Pieces](./images/vector-pieces.jpg)
 
-> JD: "Users will" -> rewrite to put the requirement on the game
+From the title screen, Griffin Chess shall offer the choice of going to the **Options** menu or starting a **New Game** by clicking on the appropriate button, similar to the ones seen in this sample design.
 
-Using the mouse, users will be able to navigate the game's main menu and adjust settings by clicking on a variety of buttons, like the ones **pictured below**. The user can begin a new game of chess by clicking on the "Start Game" button.
+![Main Menu](./images/main-menu.gif)
 
-![Java Swing Buttons](./swing-button.png)
+On the **Options** menu, Griffin Chess shall provide buttons that allow users to customize the games appearence, the type of opponent, and the difficulty (these features are described in detail in Section 4).
 
-> JD: Lots of requirements are hidden in here that need to be made explicit.  I.e. "The game shall show a top down view..", and "The game shall allow a user to select a piece by clicking"...  Instead of a paragraph of text, break these each out.  Use a bulleted list or something similar.  Also, try to be more specific/add detail.  How does the piece become highlighted?  Consider corner/negative cases: What happens if the user clicks an invalid square, etc.  To me, this is the guts of the document, and it needs to be detailed.  This is the part the user would really care about.
+When the **New Game** button is clicked, a new game of game chess shall begin, with the options the user has selected.
 
-Once a game has begun, the user will be shown a top down view of a chessboard with all of the pieces on it. On their turn a user can select a piece by clicking on it, which will cause it to become highlighted. Once a piece has been selected the user can click on a space to select it as a target/destination. If this space can be reached through a valid move, the square on the board will become highlighted, and a "Confirm" button will become enabled. If the user confirms their move, an animation will be displayed of the piece moving to its new location, overtaking any pieces that might currently occupy that space. The other player, whether computer or human, will take their move, and the two players will continue until one wins or forfeits. A screen will be displayed at the end of the game, summarizing the match.
+By defualt, a new game shall be set against an AI-controlled opponent at a "normal" difficulty setting.
 
-![Chess Board](./chess-board.gif)
+Once a game has begun, Griffin Chess shall display a top down view of a chess board with all of the pieces on it, similar to the prototype below.
+
+![Chess Board](./images/chess-board.gif) 
+
+On a users turn, Griffin Chess shall allow pieces to be selected by clicking on the piece directly on the chess board.
+
+When a piece is selected, the square of the board containing it shall become highlighted.
+
+When a piece is selected, the available destinations for that piece shall also become highlighted with a different color, and Griffin Chess shall allow players to click on a highlighted square to select it as their move.
+
+Griffin Chess shall indicate a move has been selected by highlighting a chosen square with a third color, as seen in the prototype image below.
+
+![Highlighted Chess Board](./images/highlighted-chess-board.gif)
+
+If a chosen move contains an oppsing players piece, a seperate color shall be used to highlight the square, indication that it can be captured.
+
+Griffin Chess shall provide a **Confirm** button that when clicked, shall accept a players move and advance the game to the next players turn.
+
+If a player takes a move that captures an opposing players piece, that piece shall be removed from the board.
+
+If a new piece belonging to the current player is clicked on instead, Griffin Chess shall display the available destinations for that piece, and repeat the process.
+
+If an invalid square is clicked, Griffin Chess shall un-highlight and deselect all squares.
+
+Griffin Chess shall impose no time limit on the length of a players turn.
+
+Griffin Chess shall continue to alternate control of the game between the two players until one forfeits or checkmate is acheived, which shall be detected automatically.
+
+Griffin Chess shall display a message at the end of a game summarizing the results.
+
+![Checkmate Chess Board](./images/endgame-board.gif)
 
 ### 3.2 Hardware Interfaces
->JD: You still need a mouse and monitor, I assume?  Keyboard?  Speakers?
-
-Since our game will be written in Java, which is executed in a virtual machine, we will not need to interface directly with any hardware. Any type of hardware that is able to run and support the JVM should be able to run the executable JAR files for this game.
+Griffin Chess shall require no specific hardware other than a mouse for input, a monitor to display the game, and a computer than can support the JRE, which is needed to run the game files.
 
 ## 4. System Features
 
