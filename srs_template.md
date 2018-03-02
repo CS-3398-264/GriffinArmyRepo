@@ -137,21 +137,28 @@ The interface shall provide an option button for a second player or computer opp
 
 ### 4.2 Difficulty level 
 4.2.1 Description
-The greeting interface should allow the user to change the difficulty level of the A.I opponent. In figure 2, Shows there should be three levels of difficulty, easy, medium, and hard. The default level will be easy. Hard difficulty will maximize the A.I. efficiency to win the game.  
+The greeting interface shall allow the user to change the difficulty level of the A.I opponent. In figure 2, Shows there shall be three levels of difficulty, easy, medium, and hard. The default level will be easy. Hard difficulty will maximize the A.I. efficiency to win the game.  
 
 ### 4.3 Game Rules / Beginner help FAQ 
 4.3.1 Description
 As shown in Figure 3, when the user is in the game, a button in the right top corner of the UI window during the game when clicked should open a page with the Griffin Game of Chess rules. The rule FAQ should open a link or list of official chest rules to play Griffin Chess. 
 
+![Figures](./Figures/Day-mode.jpg)
+
+
+![Figures](./Figures/Night-mode.jpg)
+
+
+
 ### 4.4 Day/Night Mode
-4.5.1 Description
+4.4.1 Description
 >JD: Good idea, a picture would help a lot here.  How does the user access this?  Please detail.
 
-The overall U.I theme should be able to change for the comfort of the user due to eyestrain. The default theme when Griffin Chess opens is the day mode U.I. The colors for day mode are visibly brighter for use in bright conditions. Night mode changes the U.I colors to visibly darker colors to decrease the chance of eyestrain. The user should have the option to toggle between either day or night mode while in progress of the game. 
+The overall U.I theme should be able to change for the comfort of the user due to eyestrain. The default theme when Griffin Chess opens is the day mode U.I. The colors for day mode are visibly brighter for use in bright conditions. Night mode changes the U.I colors to visibly darker colors to decrease the chance of eyestrain. As meantioned in Section 3.1, the user should have the option to toggle between either day or night mode while in progress of the game by clicking the option menu button. 
 
 ### 4.5 Interactive Game Moves
-4.7.1 Description
-The user should be shown the possible move outcomes with the piece that is chosen. The intergraded A.I should help with the outcomes regardless if there is a human or A.I opponent. The U.I should display a notification on the board to interact with the user. If a move has the outcome of a piece capture, the U.I will display a ‘X’ over the piece that will be captured.
+4.5.1 Description
+The user shall be shown the possible move outcomes with the piece that is chosen. The intergraded A.I should help with the outcomes regardless if there is a human or A.I opponent. The U.I should display a notification on the board to interact with the user. If a move has the outcome of a piece capture, the U.I will display a ‘X’ over the piece that will be captured.
 
 
 ## 5. Other Nonfunctional Requirements
