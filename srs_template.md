@@ -157,7 +157,7 @@ The user should be shown the possible move outcomes with the piece that is chose
 ## 5. Other Nonfunctional Requirements
 
 ### 5.1 Performance Requirements  
-The program shall not crash. Other than that, there are not any specific performance requirements. The time complexity and space complexity have not been specified. The overall goal is to get the program running without any bugs or user-related problems.
+The program shall not crash. Other than that, there are not any specific performance requirements. The time complexity and space complexity have not been specified. The overall goal shall be to get the program running without any bugs or user-related problems.
 
 ### 5.2 Safety Requirements  
 There are no safety requirements.
