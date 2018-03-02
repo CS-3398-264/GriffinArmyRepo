@@ -25,25 +25,24 @@ Griffin Chess is developed entirely in Java and can be launched on a system that
 
 The product is a java based stand alone application for a Chess game. The system provides simple mechanism for users to play against an opponent in a game of chess.
 The following are the main features that are included in the game.
-1/2 player: The user can play against the computer, or against a second player.
-Difficulty: If playing 1-player, the user can select varying AI difficulty
-User account: The system allows the user to create their accounts in the system, along with profile view.
+1/2 player: The game provides the options to play against an A.I., or a second player.
+Difficulty: Varying A.I. difficulty settings shall be available.
 Tips/How to play: A section that includes an explanation of the basic rules of chess, along with some tips to get the user started.
 
 ### 2.2 Product Functions
 > JD: "Let the user" -> make this a clear system requirement.  "(if it's one of the features we'll implement)" -> Just make it a requirement.  If you don't get it implemented, that's fine, you just don't get an extra point in that section for it.  For now we will assume you will try to do them all.
 
-Let the user choose options from a menu, which are: 
+The following options shall be available in a starting menu: 
    Single player -> Start a game of chess against a computer: Difficulty selection is also available here
    Two-player (if it's one of the features we'll implement) -> Start a game of chess with two players
-   Account -> Let user see their account info (history/settings/scores/etc)
+   Night/Day mode -> This option shall change the color layout of the board.
    Tips/How to play -> display a list of tips/how-to-play manual
  
 
 ### 2.3 User Classes and Characteristics
 > JD: I like that you will be providing instruction to the user, so a novice to chess can play.  You might want to clarify the first sentence though.  Not _ANY_ computer will work...
 
-The expected user simply is anyone with access to a computer. There are no privilege levels/educational level/expertise nor experience required. The user is not expected to know Chess, as the rules and tips/strategies will be included in the application.
+The expected user shall be anyone with access to a computer which can run the JRE. There are no privilege levels/educational level/expertise nor experience required. The user is not expected to know Chess, as the rules and tips/strategies shall be included in the application.
 
 ### 2.4 Operating Environment
 > JD: Which Java version?  You need to set a minimum.
@@ -53,7 +52,7 @@ This will be a Java based application, so the user must have installed the Java 
 ### 2.5 User Documentation
 > JD: A section of what?  If you do have bug workarounds, just let me know when you submit the papers/code (which will be a repo clone, btw).
 
-A section with the Chess rules will be included, along with some initial basic tips to give the user a good idea on how to start playing chess. 
+The Chess rules will be included within the game, along with some initial basic tips to give the user a good idea on how to start playing chess. 
 (Aside, in case there are any bugs that were not able to be fixed at time of product delivery, perhaps to include and list of possible workarounds?)
 
 ### 2.6 Assumptions and Dependencies
