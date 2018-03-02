@@ -34,15 +34,12 @@ _<List any project definitions and acronyms introduced to the project by this de
   •	Player    -----      The user/A.I. that moves the pieces on the board to play the game.
 
 ### 1.4 Supporting Materials
-_<Note any references or related materials here.>_
-  
- FIDE Laws of Chess
- 
- Guide to building a simple chess A.I.by Lauri Hartikka, March 30, 2017.
- 
- https://medium.freecodecamp.org/simple-chess-ai-step-by-step-1d55a9266977
- 
- Software Engineering by Sommerville, 10th Ed. - Chapter 5 System Modeling
+* FIDE Laws of Chess
+  * www.fide.com/component/handbook/?id=124&view=article
+* Guide to building a simple chess A.I.by Lauri Hartikka, March 30, 2017.
+  * https://medium.freecodecamp.org/simple-chess-ai-step-by-step-1d55a9266977
+* Software Engineering by Sommerville, 10th Ed. - Chapter 5 System Modeling
+  * MVC Diagram from the book goes here... serves as an outline for the structure of our app
   
 
 ### 1.5 Document Overview
@@ -54,14 +51,14 @@ Chapter 3 In this chapter the design patter is broken down into its major elemen
 
 
 ## 2. Architecture
-* cleaned up version of our whiteboard class diagram
+![High-Level Class Diagram](./images/high-level-classes.png)
 
-_<The architecture provides the top level design view of a system and provides a basis for more detailed design work. This is the section where you should include your High-Level design Component Diagram.>_
+While the user will interact with the game through the GUI front end, the core mechanics will be operating in a loosely coupled back-end and will follow a Model-View-Controller pattern. The game state, logic, and user interactions will be kept separate from the classes that display them, which will allow us to offer users different display options in the future and will allow the teams to write more maintainable, encapsulated code.
 
 ### 2.1 Overview
 * state diagram
 _<This section provides a high level overview of the structural and functional decomposition of the system. Focus on how and why the system was decomposed in a particular way rather than on details of the particular components. Include information on the major responsibilities and roles that the system (or portions of it) must play.>_    
-While the user will interact with the game through the GUI front end, the core mechanics will be operating in a loosely coupled back-end and will follow a Model-View-Controller pattern. The game state, logic, and user interactions will be kept separate from the classes that display them, which will allow us to offer users different display options in the future and will allow the teams to write more maintainable, encapsulated code.
+
 
 ### 2.2 `App` Component 
 _<Describe an element (subsystem, component, etc...) from architecture in further detail. When appropriate, include information on how the element is further broken down and the interactions and relationships between these subcomponents.>_
