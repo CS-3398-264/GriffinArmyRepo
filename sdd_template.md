@@ -64,9 +64,17 @@ _<Provide a description and diagrams of a system component or set of components 
 ## 4. Use Cases
 
 ### 4.1 Use-Case 1
-* picture
+![Use Case 1](./images/use-case-1.png)
 * description
 
 ### 4.2 Use-Case 2
-* picture
+![Use Case 2](./images/use-case-2.png)
+* description
+
+### 4.3 Use-Case 3
+![Use Case 3](./images/use-case-3.png)
+* description
+
+### 4.4 Use-Case 4
+![Use Case 4](./images/use-case-4.png)
 * description
