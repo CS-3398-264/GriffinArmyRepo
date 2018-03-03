@@ -141,7 +141,7 @@ The `OptionsWindow` class extends `aWindow` and provides characteristics and fun
 
 ## 3. High-Level Design
 
-Griffin Chess shall accept input from the user through mouse clicks on buttons in the menus, and on cells of the chess board during the game. The following sequence diagram shows how input shall be handled by the View components and the flow of data back to the Model. From there, the Observable `Board` class updates the View directly with the newest version of the board, which shall then highlights its cells accordingly
+Griffin Chess shall accept input from the user through mouse clicks on buttons in the menus, and on cells of the chess board during the game. The following sequence diagram shows how input shall be handled by the View components and the flow of data back to the Model. From there, the Observable `Board` class shall update the View directly with the newest version of the board state, which then highlights its cells accordingly
 
 ![Sequence Diagram](./images/observer-sequence.png)
 
