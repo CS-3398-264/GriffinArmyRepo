@@ -56,63 +56,93 @@ _<Describe an element (subsystem, component, etc...) from architecture in furthe
 
 The `App` class acts as the Model in the MVC architecture and maintains the currently selected options.
 
+![App Class Breakdown](./images/class-breakdowns/app.png)
+
 ### 2.2.2 `Board` Class
 
 The `Board` class maintains the state of the board and the location. The Board class extends the Observable class in order to take advantage of the Observer/Observable pattern and keeps its observers constantly updated with the most current version of the board.
+
+![Board Class Breakdown](./images/class-breakdowns/board.png)
 
 ### 2.2.3 `aPiece` Class
 
 The abstract `aPiece` class contains the implementation of functions that are relevant to all pieces.
 
+![aPiece Class Breakdown](./images/class-breakdowns/aPiece.png)
+
 ### 2.2.4 `Pawn` Class
 
 The `Pawn` extends the `aPiece` class and initializes individual pawn pieces and provides functions for the characteristics of the pawn.
+
+![Pawn Class Breakdown](./images/class-breakdowns/pawn.png)
+
 
 ### 2.2.5 `Piece` Interface
 
 The `Piece` interface provides function declarations that are relevant to all pieces.
 
+![Piece Class Breakdown](./images/piece.png)
+
+
 ### 2.2.6 `Human` Class
 
 The `Human` class implements `Player` and creates a player and initializes the pieces.
+
+![Human Class Breakdown](./images/class-breakdowns/human.png)
+
 
 ### 2.2.7 `Player` Interface
 
 The `Player` interface provides function declarations that are relevant to all players.
 
+![Player Class Breakdown](./images/class-breakdowns/player.png)
+
+
 ### 2.2.8 `Cell` Class
 
 The `Cell` class extends `JButton` and initializes the characteristics of each cell on the chess board and specifies colors for the varying moves of the chess pieces and the natural color of the cells of the board.
+
+![Cell Class Breakdown](./images/class-breakdowns/cell.png)
+
 
 ### 2.2.9 `GUI` Class
 
 The `GUI` class instantiates the View and graphics.
 
-### 2.2.10 `Main` Class
+![GUI Class Breakdown](./images/class-breakdowns/gui.png)
 
-The `Main` class holds the location of main() and instantiates the application.
 
-### 2.2.11 `aWindow` Class
+### 2.2.10 `aWindow` Class
 
 The `aWindow` class provides characteristics and functions that are common to all unique windows.
 
-### 2.2.12 `BoardWindow` Class
+![aWindow Class Breakdown](./images/class-breakdowns/aWindow.png)
+
+
+### 2.2.11 `BoardWindow` Class
 
 The `BoardWindow` extends the `aWindow` class and provides characteristics and functions unique to the board.
 
-### 2.2.13 `MenuWindow` Class 
+![BoardWindow Class Breakdown](./images/class-breakdowns/BoardWindow.png)
+
+
+### 2.2.12 `MenuWindow` Class 
 
 The `MenuWindow` extends the `aWindow` class and provides characteristics and functions unique to the menu.
 
-### 2.2.14 `OptionsWindows` Class
+![MenuWindow Class Breakdown](./images/class-breakdowns/MenuWindow.png)
+
+
+### 2.2.13 `OptionsWindows` Class
 
 The `OptionsWindow` class extends `aWindow` and provides characteristics and functions unique to the options.
 
+![OptionsWindow Class Breakdown](./images/class-breakdowns/OptionsWindow.png)
 
 
 
 
-![image](./images/class-breakdowns/app.png)
+
 
 ## 3. High-Level Design
 * **diagram of model/view interactivity (or something) here**

@@ -3,10 +3,12 @@
 ### 1.1 Purpose 
 The purpose of this document is to provide a detailed requirements overview for the Griffin Chess application. It will also explain the purpose and features. Griffin Chess shall provide the user with a reliable, well designed chess game. The version of this product is 1.0 and this SRS shall cover the full scope of the chess game.
 
-### 1.2 Document Conventions
-* Acronyms
-  * GC: Griffin Chess
-  * IDE: Integrated Development Environment
+### 1.2 Definitions, Acronyms and Abbreviations
+|Term | Definition|
+|:-------|:---------:|
+|GC|Griffin Chess|
+|IDE|Integrated Development Environment|                      
+|JRE|Java Runtime Environment| 
 
 ### 1.3 Product Scope
 Griffin Chess is developed entirely in Java and can be launched on a system that supports the JRE. This entire project will be available on GitHub.
