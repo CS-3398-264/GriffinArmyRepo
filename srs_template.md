@@ -65,6 +65,8 @@ Since this will be a standalone application, there will not be any other depende
 
 ![Main Menu](./images/main-menu.gif)
 
+* From the title screen, Griffin Chess shall also display a button to access a chess rules FAQ, which will either open a new in-game window or external website.
+
 * On the **Options** menu, Griffin Chess shall provide buttons that allow users to customize the games appearence, the type of opponent, and the difficulty (these features are described in detail in Section 4).
 
 * When the **New Game** button is clicked, a new game of game chess shall begin, with the options the user has selected.
@@ -124,7 +126,7 @@ The greeting interface shall allow the user to change the difficulty level of th
 
 ### 4.3 Game Rules / Beginner help FAQ 
 4.3.1 Description
-As shown in Figure 3, when the user is in the game, a button in the right top corner of the UI window during the game when clicked should open a page with the Griffin Game of Chess rules. The rule FAQ should open a link or list of official chest rules to play Griffin Chess. 
+From the title screen, Griffin Chess shall provide a button or link that displays a chess rules FAQ for the the user. The rule FAQ should open an external website or an in-game list of official chest rules to play Griffin Chess. 
 
 ### 4.4 Day/Night Mode
 4.4.1 Description
