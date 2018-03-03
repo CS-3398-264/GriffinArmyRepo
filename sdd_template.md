@@ -139,19 +139,17 @@ The `OptionsWindow` class extends `aWindow` and provides characteristics and fun
 
 ![OptionsWindow Class Breakdown](./images/class-breakdowns/OptionsWindow.png)
 
-
-
-
-
-
 ## 3. High-Level Design
-* **diagram of model/view interactivity (or something) here**
+
+Griffin Chess shall accept input from the user through mouse clicks on buttons in the menus, and on cells of the chess board during the game. The following sequence diagram shows how input shall be handled by the View components and the flow of data back to the Model. From there, the Observable `Board` class updates the View directly with the newest version of the board, which shall then highlights its cells accordingly
+
+![Sequence Diagram](./images/observer-sequence.png)
 
 The user opens the Griffin Chess application and an initial start screen is shown. The user has the choice to start the game or change certain options to the preferences of the user. The user can change display options, whether the opponent should be another person or the AI, varying difficulties for the AI, and can cancel changes or apply those changes to the game. If the user chooses to start the game, the chess board and pieces are generated and the user can play the game. When the user moves a piece, the move is confirmed by the user and the piece moves to an available space until the game ends by checkmate or stalemate. The user can also quit in the middle of the game at any time.
 
 ![State Diagram](./images/state-diagram.png)
 
-### 3.1 View / Model Component 1..n
+### 3.1 View / Model Components
 _<Provide a description and diagrams of a system component or set of components that describes a clearly defined view or model of the entire system or a subset of the system.>_
 
 ## 4. Use Cases
