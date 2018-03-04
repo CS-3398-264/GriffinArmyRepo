@@ -1,0 +1,51 @@
+package com.griffin.chess.views;
+
+import com.griffin.chess.utilities.GUI;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.HashMap;
+
+public class MenuWindow extends aWindow {
+
+    public MenuWindow(GUI parent, HashMap<String, String> state) {
+        super(parent, state);
+        setTitle("Griffin Chess");
+
+        /* Title */
+        JLabel title = new JLabel("Griffin Chess");
+        title.setFont(new Font("Courier", Font.BOLD, 32));
+        title.setBounds(70,80,250,100);
+        title.setForeground(textColor);
+        add(title);
+
+        /* 'Start' and 'Options' Buttons */
+        JButton optionsButton = new JButton("Options");
+        optionsButton.setBounds(LEFT_BUTTON_X, BUTTON_Y, BUTTON_WIDTH, BUTTON_HEIGHT);
+        optionsButton.addActionListener(this);
+        applyButtonTheme(optionsButton);
+        add(optionsButton);
+        JButton startButton = new JButton("Start");
+        startButton.setBounds(RIGHT_BUTTON_X, BUTTON_Y, BUTTON_WIDTH, BUTTON_HEIGHT);
+        startButton.addActionListener(this);
+        applyButtonTheme(startButton);
+        add(startButton);
+        getRootPane().setDefaultButton(startButton);
+        startButton.requestFocus();
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        String buttonType = e.getActionCommand();
+        setVisible(false);
+        switch (buttonType) {
+            case "Start":
+                myGUI.setView("board");
+                break;
+            case "Options":
+                myGUI.setView("options");
+                break;
+        }
+    }
+}
