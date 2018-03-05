@@ -163,6 +163,7 @@ Main Flow: As Griffin Chess is opened, the player has the choice to start the ga
 
 ### 4.2 Move Pieces
 ![Use Case 2](./images/use-case-2.png)
+
 Preconditions: During the use of the game.
 
 Main Flow: The player with the current turn has the option to move the selected piece. 
@@ -179,7 +180,7 @@ Main Flow: The player chooses the A.I as an opponent, starts the game, and while
 
 Preconditions: None.
 
-Main Flow: The player 1 starts the game. Player 2 or the A.I joins the game and uses the same game functions as player 1. 
+Main Flow: Player one initiates the start of the game. Depending if player one has chosen a Player 2 opponent or the A.I, joins the game. During the current players turn, the select piece and move piece options are available which then can lead to the winning of the game. If player two is in the game state with player 1 both can quit game if desired. 
 
 ## 5. Test Plan
 
