@@ -115,6 +115,10 @@ public class Board extends Observable {
                                     + piece.getType()
                                     + setID(piece.getID()));
                 }
+                // debugging castling
+                if (piece.canCastle())
+                    System.out.println(piece.getOwner() + piece.getType()
+                            + piece.getID() + " can castle");
             }
         }
     }
@@ -169,6 +173,10 @@ public class Board extends Observable {
     }
 
     public void confirmMove() {
+        // detect a kings "castling move" here...
+        // if found.. move the appropriate rook as well
+        // CPU uses castlePerformed flag.. human could use target row/col
+
         if (players.get(activePlayer).getType().equals("human")) {
             if (!targetCell.isEmpty()) {
                 int pieceRow = selectedCell.get(0);

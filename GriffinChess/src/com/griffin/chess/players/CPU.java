@@ -79,6 +79,7 @@ public class CPU extends aPlayer {
     public String getType() { return "robot"; }
 
     public void takeAITurn(String difficulty) {
+        castlePerformed = false;
         switch (difficulty) {
             case "easy":
                 takeRandomMove();
@@ -93,6 +94,8 @@ public class CPU extends aPlayer {
     }
 
     private void takeRandomMove() {
+        // add a check in here to see if castlePerformed needs to be set
+
         int pieceMax = getPiecesWithMoves().size();
         Piece randomPiece = getPiecesWithMoves().get(new Random().nextInt(pieceMax));
         int movesMax =  randomPiece.getAvailableMoves().size();
@@ -123,6 +126,8 @@ public class CPU extends aPlayer {
     }
 
     private void takeSmarterMove(String difficulty) {
+        // add a check in here to see if castlePerformed needs to be set
+
         Piece bestPiece = null;
         Piece targetPiece;
         ArrayList<Integer> bestMove;

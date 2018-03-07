@@ -9,11 +9,15 @@ import java.util.Observable;
 public abstract class aPlayer implements Player {
     int playerID;
     protected ArrayList<Piece> pieces;
+    protected boolean castlePerformed;
 
     aPlayer(int ID) {
         playerID = ID;
         pieces = generateNewPieces();
+        castlePerformed = false;
     }
+
+    public boolean getCastlePerformed() { return castlePerformed; }
 
     public abstract String getType();
 
