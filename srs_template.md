@@ -65,8 +65,6 @@ Since this will be a standalone application, there will not be any other depende
 
 ![Main Menu](./images/main-menu.gif)
 
-* From the title screen, Griffin Chess shall also display a button to access a chess rules FAQ, which will either open a new in-game window or external website.
-
 * On the **Options** menu, Griffin Chess shall provide buttons that allow users to customize the games appearence, the type of opponent, and the difficulty (these features are described in detail in Section 4).
 
 * When the **New Game** button is clicked, a new game of game chess shall begin, with the options the user has selected.
@@ -124,12 +122,8 @@ The interface shall provide an option button for a second player or computer opp
 4.2.1 Description
 The greeting interface shall allow the user to change the difficulty level of the A.I opponent. In figure 2, Shows there shall be three levels of difficulty, easy, medium, and hard. The default level will be easy. Hard difficulty will maximize the A.I. efficiency to win the game.  
 
-### 4.3 Game Rules / Beginner help FAQ 
+### 4.3 Day/Night Mode
 4.3.1 Description
-From the title screen, Griffin Chess shall provide a button or link that displays a chess rules FAQ for the the user. The rule FAQ should open an external website or an in-game list of official chest rules to play Griffin Chess. 
-
-### 4.4 Day/Night Mode
-4.4.1 Description
 
 The overall U.I theme should be able to change for the comfort of the user due to eyestrain. The default theme when Griffin Chess opens is the day mode U.I. The colors for day mode are visibly brighter for use in bright conditions. Night mode changes the U.I colors to visibly darker colors to decrease the chance of eyestrain. As meantioned in Section 3.1, the user should have the option to toggle between either day or night mode while in progress of the game by clicking the option menu button. 
 
