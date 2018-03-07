@@ -192,8 +192,6 @@ Main Flow: Player one initiates the start of the game. Depending if player one h
 
 * Two player mode should be available for selection
 
-* A **FAQ** button should be shown on the title screen. This should either open a new in-game window or external website
-
 * Input from the mouse should work
 
 * Images from the chess pieces should show
