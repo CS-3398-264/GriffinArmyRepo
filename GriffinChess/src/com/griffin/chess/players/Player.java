@@ -13,5 +13,5 @@ public interface Player extends Observer {
     ArrayList<Piece> getPieces();
     ArrayList<Piece> getPiecesWithMoves();
     ArrayList<Piece> generateNewPieces();
-    void takeAITurn();
+    void takeAITurn(String difficulty);
 }

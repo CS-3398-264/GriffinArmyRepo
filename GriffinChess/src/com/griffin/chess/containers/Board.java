@@ -46,6 +46,8 @@ public class Board extends Observable {
                 addObserver(piece);
             addObserver(player);
         }
+        // debugging difficulty levels...
+        System.out.println("difficulty level: " + options.get("difficulty"));
     }
 
     private void addSecondPlayer() {
@@ -53,7 +55,7 @@ public class Board extends Observable {
         if (gameOptions.get("opponent").equals("human")) {
             players.add(new Human(id));
         } else {
-            players.add(new CPU(id, players.get(0), this));
+            players.add(new CPU(id, players.get(0)));
         }
     }
 
@@ -63,7 +65,6 @@ public class Board extends Observable {
             boardState.add(new ArrayList<>());
             for (int col = 0; col < 8; col++) {
                 boardState.get(row).add("-");
-                // for now... `-` indicates a blank space
             }
         }
         return boardState;
@@ -82,7 +83,6 @@ public class Board extends Observable {
             int selCol = selectedCell.get(1);
             String cellState = boardState.get(selRow).get(selCol);
             boardState.get(selRow).set(selCol, cellState.concat("~"));
-
             // check for any highlighted destinations
             if (!destinations.isEmpty()) {
                 for (ArrayList<Integer> destination : destinations) {
@@ -96,7 +96,6 @@ public class Board extends Observable {
                         else
                             boardState.get(destRow).set(destCol, cellState.concat("."));
                 }
-
                 if (!targetCell.isEmpty()) {
                     int targetRow = targetCell.get(0);
                     int targetCol = targetCell.get(1);
@@ -109,14 +108,12 @@ public class Board extends Observable {
 
     private void addPieces() {
         for (Player player : players) {
-            //System.out.printf("players in game - %s\n", player.getType());
             for (Piece piece : player.getPieces()) {
                 if (piece.isAlive()) {
                     boardState.get(piece.getRow()).set(piece.getCol(),
                             Integer.toString(piece.getOwner())
                                     + piece.getType()
                                     + setID(piece.getID()));
-                    //System.out.printf("piece at %d, %d\n", piece.getRow(), piece.getCol());
                 }
             }
         }
@@ -129,44 +126,30 @@ public class Board extends Observable {
     }
 
     public void setSelected(String selected) {
-        // logic of IF cell should be selected goes in here.
-        // by the time we make it to the window.. its already been validated
-
         targetCell.clear();
-
         int row = parseInt(selected.substring(0,1));
         int col = parseInt(selected.substring(1));
         String cellState = boardState.get(row).get(col);
-
         // check for an available move/capture
         String moveCheck = cellState.substring(cellState.length()-1);
         switch (moveCheck) {
             case "x":
-                //System.out.println("capture click!"); // <- capture debug
                 targetCell.add(row);
                 targetCell.add(col);
                 break;
             case ".":
-                //System.out.println("valid target click!"); // <- capture debug
                 targetCell.add(row);
                 targetCell.add(col);
                 break;
             default:
-                //System.out.println(moveCheck + " click!"); // <- capture debug
-                // new piece selection
                 selectedCell.clear();
-
-                // cant select an empty cell
                 if (!boardState.get(row).get(col).equals("-")) {
-
                     int owner = Integer.parseInt(boardState.get(row).get(col).substring(0, 1));
                     int pieceID = Integer.parseInt(boardState.get(row).get(col).substring(2, 4));
-
                     if (owner == activePlayer) {
                         selectedCell.add(row);
                         selectedCell.add(col);
                         setDestinations(pieceID);
-                        //System.out.printf("Clicked Piece %s\n", pieceID);
                     }
                 }
                 break;
@@ -175,10 +158,7 @@ public class Board extends Observable {
     }
 
     private void setDestinations(int pieceID) {
-        // clear old destinations
         destinations.clear();
-
-        // get legal destinations from the piece itself
         destinations = players.get(activePlayer).getPieces().get(pieceID).getAvailableMoves();
     }
 
@@ -190,38 +170,31 @@ public class Board extends Observable {
 
     public void confirmMove() {
         if (players.get(activePlayer).getType().equals("human")) {
-            System.out.println("HUMAN TAKING TURN");    // <-- debugging AI
             if (!targetCell.isEmpty()) {
                 int pieceRow = selectedCell.get(0);
                 int pieceCol = selectedCell.get(1);
                 int targetRow = targetCell.get(0);
                 int targetCol = targetCell.get(1);
-
                 // identify the piece
                 String cellState = boardState.get(pieceRow).get(pieceCol);
                 int pieceID = Integer.parseInt(cellState.substring(2, 4));
-
                 // check for piece in target cell
                 String targetState = boardState.get(targetRow).get(targetCol);
                 // kill target piece if it exists
                 if (targetState.length() >= 4) {
                     int targetID = Integer.parseInt(targetState.substring(2, 4));
                     int enemyID = Integer.parseInt(targetState.substring(0, 1));
-
                     // call the enemy players' com.griffin.chess.pieces' kill method
                     players.get(enemyID).getPieces().get(targetID).kill();
                 }
-
                 // call the com.griffin.chess.pieces move method
                 players.get(activePlayer).getPieces().get(pieceID).movePiece(targetRow, targetCol);
             }
         } else if (players.get(activePlayer).getType().equals("robot")) {
             System.out.println("AI TAKING TURN");   // <-- debugging AI
         }
-
         // toggle the active player
         activePlayer = (activePlayer + 1) % players.size();
-
         // update the view
         selectedCell.clear();
         destinations.clear();
@@ -234,7 +207,7 @@ public class Board extends Observable {
 
     // AI stuff going in here
     private void notifyAI(Player aiPlayer) {
-        aiPlayer.takeAITurn();
+        aiPlayer.takeAITurn(gameOptions.get("difficulty"));
         confirmMove();
     }
 }
