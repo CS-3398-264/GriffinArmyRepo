@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class King extends aPiece {
     King(int ownerID, int pieceID, int startRow, int startCol) {
         super(ownerID, pieceID, startRow, startCol);
+        canCastle = true;
     }
 
     public String getType() {

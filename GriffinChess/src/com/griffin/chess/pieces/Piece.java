@@ -12,5 +12,6 @@ public interface Piece extends Observer {
     ArrayList<ArrayList<Integer>> getAvailableMoves();
     void movePiece(int row, int col);
     boolean isAlive();
+    boolean canCastle();
     void kill();
 }

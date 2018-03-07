@@ -9,6 +9,7 @@ public abstract class aPiece implements Piece {
     private int ID;
     protected int row;
     protected int col;
+    protected boolean canCastle;
     private boolean isAlive;
     private ArrayList<ArrayList<String>> boardState;
 
@@ -18,6 +19,7 @@ public abstract class aPiece implements Piece {
         row = startRow;
         col = startCol;
         isAlive = true;
+        canCastle = false;
     }
 
     public abstract String getType();
@@ -44,6 +46,7 @@ public abstract class aPiece implements Piece {
     }
 
     public void movePiece(int newRow, int newCol) {
+        canCastle = false;
         row = newRow;
         col = newCol;
     }
@@ -172,6 +175,8 @@ public abstract class aPiece implements Piece {
     public boolean isAlive() {
         return isAlive;
     }
+
+    public boolean canCastle() { return canCastle; }
 
     public void kill() {
         isAlive = false;
