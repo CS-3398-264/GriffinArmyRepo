@@ -111,34 +111,6 @@ The `GUI` class instantiates the View and graphics.
 
 ![GUI Class Breakdown](./images/class-breakdowns/gui.png)
 
-
-### 2.2.10 `aWindow` Class
-
-The `aWindow` class provides characteristics and functions that are common to all unique windows.
-
-![aWindow Class Breakdown](./images/class-breakdowns/aWindow.png)
-
-
-### 2.2.11 `BoardWindow` Class
-
-The `BoardWindow` extends the `aWindow` class and provides characteristics and functions unique to the board.
-
-![BoardWindow Class Breakdown](./images/class-breakdowns/BoardWindow.png)
-
-
-### 2.2.12 `MenuWindow` Class 
-
-The `MenuWindow` extends the `aWindow` class and provides characteristics and functions unique to the menu.
-
-![MenuWindow Class Breakdown](./images/class-breakdowns/MenuWindow.png)
-
-
-### 2.2.13 `OptionsWindows` Class
-
-The `OptionsWindow` class extends `aWindow` and provides characteristics and functions unique to the options.
-
-![OptionsWindow Class Breakdown](./images/class-breakdowns/OptionsWindow.png)
-
 ## 3. High-Level Design
 
 Griffin Chess shall accept input from the user through mouse clicks on buttons in the menus, and on cells of the chess board during the game. The following sequence diagram shows how input shall be handled by the View components and the flow of data back to the Model. From there, the Observable `Board` class shall update the View directly with the newest version of the board state, which then highlights its cells accordingly
@@ -150,7 +122,33 @@ The user opens the Griffin Chess application and an initial start screen is show
 ![State Diagram](./images/state-diagram.png)
 
 ### 3.1 View / Model Components
-_<Provide a description and diagrams of a system component or set of components that describes a clearly defined view or model of the entire system or a subset of the system.>_
+
+### 3.1.1 `aWindow` Class
+
+The `aWindow` class provides characteristics and functions that are common to all unique windows.
+
+![aWindow Class Breakdown](./images/class-breakdowns/aWindow.png)
+
+
+### 3.1.2 `BoardWindow` Class
+
+The `BoardWindow` extends the `aWindow` class and provides characteristics and functions unique to the board.
+
+![BoardWindow Class Breakdown](./images/class-breakdowns/BoardWindow.png)
+
+
+### 3.1.3 `MenuWindow` Class 
+
+The `MenuWindow` extends the `aWindow` class and provides characteristics and functions unique to the menu.
+
+![MenuWindow Class Breakdown](./images/class-breakdowns/MenuWindow.png)
+
+
+### 3.1.4 `OptionsWindows` Class
+
+The `OptionsWindow` class extends `aWindow` and provides characteristics and functions unique to the options.
+
+![OptionsWindow Class Breakdown](./images/class-breakdowns/OptionsWindow.png)
 
 ## 4. Use Cases
 The Use case diagrams give an representation of the most significant scernarios that the player may use. 
