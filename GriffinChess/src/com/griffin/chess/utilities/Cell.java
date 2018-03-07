@@ -54,18 +54,14 @@ public class Cell extends JButton {
         if(cellState.substring(0,1).equals("-")) {
             setIcon(null);
         } else {
-            if(isNight(theme)) {
-                if(!isEmpty(cellState)) {
+            if(isNight(theme) && !isEmpty(cellState)) {
                     showWhiteAndRed(cellState.substring(0,2));
-                }
-            }
-            else {
-                if(!isEmpty(cellState)) {
+
+            } else if(!isNight(theme) && !isEmpty(cellState)) {
                     showBlackAndWhite(cellState.substring(0,2));
                 }
             }
         }
-    }
 
     public void setPosition(int row, int col) {
         this.row = row;
