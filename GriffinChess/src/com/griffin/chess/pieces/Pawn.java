@@ -37,6 +37,20 @@ public class Pawn extends aPiece {
         cell = getCellState(goFrontRight(1));
         if (isOccupied(cell) && !isOwnPiece(cell))
             availableMoves.add(goFrontRight(1));
+
+        // check for en passant
+        int eligibleRow;
+        // determine eligible row for player
+        if (getOwner() == 0) eligibleRow = 3;
+        else eligibleRow = 4;
+        // check target row
+        if (getRow() == eligibleRow) {
+            cell = getCellState(goLeft(1));
+            if (isOccupied(cell) && !isOwnPiece(cell))
+                // display target square (diagonal)
+                availableMoves.add(goFrontLeft(1));
+            // if taken, kill other pawn <-- this can't be done here...
+        }
         return availableMoves;
     }
 }

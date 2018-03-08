@@ -169,11 +169,6 @@ public class Board extends Observable {
     }
 
     public void confirmMove() {
-        // detect a kings "castling move" here...
-        // if found.. move the appropriate rook as well
-        // CPU uses performedCastle flag.. human could use target row/col
-
-
         // handle human move
         if (players.get(activePlayer).getType().equals("human")) {
             // handle captures
@@ -196,6 +191,26 @@ public class Board extends Observable {
                 }
                 Piece activePiece = players.get(activePlayer).getPieces().get(pieceID);
                 int moveDistance = Math.abs(targetCol - activePiece.getCol());
+
+                // check for en passant
+                int passantRow;
+                int passantTargetRow;
+                // determine eligible row for player
+                if (activePlayer == 0) passantRow = 3;
+                else passantRow = 4;
+
+                if (targetState.length() > 0) {
+                    if (activePiece.getType().equals("♙") && pieceRow == passantRow && targetState.substring(0,1).equals("-")) {
+                        System.out.printf("active pawn at %d,%d is en passant eligible\n", pieceRow, pieceCol);
+                        if (targetCol == pieceCol - 1 || targetCol == pieceCol + 1) {
+                            int targetID = Integer.parseInt(boardState.get(pieceRow).get(targetCol).substring(2,4));
+                            players.get(activePlayer + 1 % 2).getPieces().get(targetID).kill();
+                            System.out.println(boardState.get(pieceRow).get(targetCol) + " would get killed");
+                        }
+                    }
+                }
+
+
 
                 if (activePiece.getType().equals("♚") && moveDistance == 2) {
                     int castleID;
@@ -225,24 +240,22 @@ public class Board extends Observable {
                 // handle normal piece move here (castling falls-through and hits this too, to move king)
                 activePiece.movePiece(targetRow, targetCol);
             }
-        /*
+
         // handle computer (AI) move
         } else if (players.get(activePlayer).getType().equals("robot")) {
             // perform check for castling flag
             System.out.println("AI TAKING TURN");   // <-- debugging AI
         }
-        */
-            // toggle the active player
-            activePlayer = (activePlayer + 1) % players.size();
-            // update the view
-            selectedCell.clear();
-            destinations.clear();
-            targetCell.clear();
-            updateDisplay();
-            // let the computer (AI) know to go
-            if (players.get(activePlayer).getType().equals("robot"))
-                notifyAI(players.get(activePlayer));
-        }
+        // toggle the active player
+        activePlayer = (activePlayer + 1) % players.size();
+        // update the view
+        selectedCell.clear();
+        destinations.clear();
+        targetCell.clear();
+        updateDisplay();
+        // let the computer (AI) know to go
+        if (players.get(activePlayer).getType().equals("robot"))
+            notifyAI(players.get(activePlayer));
     }
 
     // AI stuff going in here

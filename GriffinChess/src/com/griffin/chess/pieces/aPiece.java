@@ -200,11 +200,11 @@ public abstract class aPiece implements Piece {
     }
 
     boolean isOccupied(String cellState) {
-        return !cellState.substring(0, 1).equals("-");
+        return !cellState.substring(0,1).equals("-");
     }
 
     boolean isOwnPiece(String cellState) {
-        return cellState.length() >= 4 && Integer.parseInt(cellState.substring(0, 1)) == getOwner();
+        return cellState.length() >= 4 && Integer.parseInt(cellState.substring(0,1)) == getOwner();
     }
 
     @Override
