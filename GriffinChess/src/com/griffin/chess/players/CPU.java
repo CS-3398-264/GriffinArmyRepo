@@ -102,6 +102,9 @@ public class CPU extends aPlayer {
         // check for castling here
         checkForCastling(randomPiece, targetCol);
 
+        // check for en passant here
+        checkForEP(randomPiece, targetCol);
+
         // check for piece in target cell
         String targetState = currentBoardState.get(targetRow).get(targetCol);
         // kill target piece if it exists
@@ -130,6 +133,24 @@ public class CPU extends aPlayer {
                 getPieces().get(castleID).movePiece(pieceRow, 5);
             }
         }
+    }
+
+    private void checkForEP(Piece movingPiece, int targetCol) {
+        // check for en passant
+        int passantRow = 4;
+        String targetState = currentBoardState.get(passantRow).get(targetCol);
+        if (targetState.length() > 1) {
+            if (movingPiece.getType().equals("♙") && movingPiece.getRow() == passantRow && targetState.substring(0,1).equals("-")) {
+                System.out.printf("active pawn at %d,%d is en passant eligible\n", movingPiece.getRow(), targetCol);
+                if (targetCol == targetCol - 1 || targetCol == targetCol + 1) {
+                    int targetID = Integer.parseInt(currentBoardState.get(movingPiece.getRow()).get(targetCol).substring(2,4));
+                    enemy.getPieces().get(targetID).kill();
+                    System.out.println(currentBoardState.get(movingPiece.getRow()).get(targetCol).substring(2,4));
+                    System.out.println(currentBoardState.get(movingPiece.getRow()).get(targetCol) + " would get killed");
+                }
+            }
+        }
+
     }
 
     private ArrayList<ArrayList<String>> getBoardCopy() {
@@ -190,6 +211,8 @@ public class CPU extends aPlayer {
         if (bestPiece != null) {
             // check for castling here
             checkForCastling(bestPiece, bestCol);
+            // check for en passant here
+            checkForEP(bestPiece, bestCol);
             bestPiece.movePiece(bestRow, bestCol);
             System.out.printf("AI moved %s%d to %d,%d\n", bestPiece.getType(), bestPiece.getID(), bestRow, bestCol);
         }

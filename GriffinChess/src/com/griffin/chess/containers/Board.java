@@ -169,48 +169,43 @@ public class Board extends Observable {
     }
 
     public void confirmMove() {
+        int pieceRow = selectedCell.get(0);
+        int pieceCol = selectedCell.get(1);
+        String cellState = boardState.get(pieceRow).get(pieceCol);
+        int targetRow;
+        int targetCol = 0;
+        int pieceID = Integer.parseInt(cellState.substring(2,4));
+        int targetID;
+        int enemyID;
+        int passantRow;
+        String targetState = "-";
+        String passantState = "";
+        Piece activePiece = players.get(activePlayer).getPieces().get(pieceID);
+
+
         // handle human move
         if (players.get(activePlayer).getType().equals("human")) {
+
+            // en passant crap
+            System.out.printf("confirming move for playerID: %d\n", activePlayer);
+            System.out.printf("Piece type: %s\n", players.get(activePlayer).getPieces().get(pieceID).getType());
+
             // handle captures
             if (!targetCell.isEmpty()) {
-                int pieceRow = selectedCell.get(0);
-                int pieceCol = selectedCell.get(1);
-                int targetRow = targetCell.get(0);
-                int targetCol = targetCell.get(1);
+                targetRow = targetCell.get(0);
+                targetCol = targetCell.get(1);
                 // identify the piece
-                String cellState = boardState.get(pieceRow).get(pieceCol);
-                int pieceID = Integer.parseInt(cellState.substring(2, 4));
+                pieceID = Integer.parseInt(cellState.substring(2, 4));
                 // check for piece in target cell
-                String targetState = boardState.get(targetRow).get(targetCol);
+                targetState = boardState.get(targetRow).get(targetCol);
                 // kill target piece if it exists
                 if (targetState.length() >= 4) {
-                    int targetID = Integer.parseInt(targetState.substring(2, 4));
-                    int enemyID = Integer.parseInt(targetState.substring(0, 1));
+                    targetID = Integer.parseInt(targetState.substring(2, 4));
+                    enemyID = Integer.parseInt(targetState.substring(0, 1));
                     // call the enemy players' com.griffin.chess.pieces' kill method
                     players.get(enemyID).getPieces().get(targetID).kill();
                 }
-                Piece activePiece = players.get(activePlayer).getPieces().get(pieceID);
                 int moveDistance = Math.abs(targetCol - activePiece.getCol());
-
-                // check for en passant
-                int passantRow;
-                int passantTargetRow;
-                // determine eligible row for player
-                if (activePlayer == 0) passantRow = 3;
-                else passantRow = 4;
-
-                if (targetState.length() > 0) {
-                    if (activePiece.getType().equals("♙") && pieceRow == passantRow && targetState.substring(0,1).equals("-")) {
-                        System.out.printf("active pawn at %d,%d is en passant eligible\n", pieceRow, pieceCol);
-                        if (targetCol == pieceCol - 1 || targetCol == pieceCol + 1) {
-                            int targetID = Integer.parseInt(boardState.get(pieceRow).get(targetCol).substring(2,4));
-                            players.get(activePlayer + 1 % 2).getPieces().get(targetID).kill();
-                            System.out.println(boardState.get(pieceRow).get(targetCol) + " would get killed");
-                        }
-                    }
-                }
-
-
 
                 if (activePiece.getType().equals("♚") && moveDistance == 2) {
                     int castleID;
@@ -239,6 +234,28 @@ public class Board extends Observable {
                 }
                 // handle normal piece move here (castling falls-through and hits this too, to move king)
                 activePiece.movePiece(targetRow, targetCol);
+            }
+
+            // check for en passant
+            // determine eligible row for player
+            if (activePlayer == 0) passantRow = 3;
+            else passantRow = 4;
+            if (targetState.length() > 1 && targetState.substring(0,1).equals("-")) {
+                passantState = boardState.get(passantRow).get(targetCol);
+            }
+            if (activePiece.getType().equals("♙") && pieceRow == passantRow && targetState.length() > 1 && targetState.substring(0,1).equals("-")) {
+                System.out.printf("active pawn at %d,%d is en passant eligible\n", pieceRow, pieceCol);
+                if (targetCol == pieceCol - 1 || targetCol == pieceCol + 1) {
+                    System.out.printf("passantState is %s\n", passantState);
+                    if (passantState.length() > 1) {
+                        System.out.println("passantState length: " + passantState.length());
+                        targetID = Integer.parseInt(passantState.substring(2,4));
+                        System.out.println("targetID: " + targetID);
+                        activePlayer = (activePlayer + 1) % players.size();
+                        players.get(activePlayer).getPieces().get(targetID).kill();
+                        System.out.printf("num of pieces in target: %d", players.get(activePlayer).getPieces().size());
+                    }
+                }
             }
 
         // handle computer (AI) move
