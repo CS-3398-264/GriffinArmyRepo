@@ -7,7 +7,6 @@ import java.util.Observer;
 
 public interface Player extends Observer {
     String getType();
-    boolean getCastlePerformed();
     ArrayList<Piece> getPieces();
     ArrayList<Piece> getPiecesWithMoves();
     ArrayList<Piece> generateNewPieces();

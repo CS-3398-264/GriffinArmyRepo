@@ -9,7 +9,8 @@ public class Rook extends aPiece {
     }
 
     public String getType() {
-        return "♖";
+        if (canCastle) return "♜";
+        else return "♖";
     }
 
     public ArrayList<ArrayList<Integer>> getAvailableMoves() {
