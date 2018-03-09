@@ -219,7 +219,7 @@ public class CPU extends aPlayer {
         System.out.printf("%s move taken.\n", difficulty);
     }
 
-    private int calculateBoardScore(ArrayList<ArrayList<String>> board, boolean evalPosition) {
+    protected int calculateBoardScore(ArrayList<ArrayList<String>> board, boolean evalPosition) {
         int score = 0;
         for (int row = 0;row < 8; row++) {
             for (int col = 0; col < 8; col++) {

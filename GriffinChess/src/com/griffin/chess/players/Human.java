@@ -8,5 +8,4 @@ public class Human extends aPlayer {
     public String getType() {
         return "human";
     }
-
 }

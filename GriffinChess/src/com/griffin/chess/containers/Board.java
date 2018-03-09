@@ -1,13 +1,5 @@
 package com.griffin.chess.containers;
 
-// once we add interactivity into the board window...
-// this Board container class will manage the state of the game
-
-// this class can observe the com.griffin.chess.pieces so when they update position, the board knows
-
-// board has 2 players
-// players have com.griffin.chess.pieces
-
 import com.griffin.chess.pieces.Piece;
 import com.griffin.chess.players.CPU;
 import com.griffin.chess.players.Human;
@@ -23,7 +15,7 @@ public class Board extends Observable {
     private HashMap<String, String> gameOptions;
     private ArrayList<Player> players;
     private int activePlayer;
-    private ArrayList<ArrayList<String>> boardState;
+    private  ArrayList<ArrayList<String>> boardState;
     private ArrayList<Integer> selectedCell;
     private ArrayList<Integer> targetCell;
     private ArrayList<ArrayList<Integer>> destinations;
@@ -279,9 +271,16 @@ public class Board extends Observable {
             notifyAI(players.get(activePlayer));
     }
 
-    // AI stuff going in here
-    private void notifyAI(Player aiPlayer) {
+    public void notifyAI(Player aiPlayer) {
         aiPlayer.takeAITurn(gameOptions.get("difficulty"));
         confirmMove();
+    }
+
+    public ArrayList<ArrayList<String>> getBoardState() {
+        return boardState;
+    }
+
+    public ArrayList<Player> getPlayers() {
+        return players;
     }
 }

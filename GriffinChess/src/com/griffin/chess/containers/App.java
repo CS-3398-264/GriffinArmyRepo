@@ -25,6 +25,10 @@ public class App {
         myGUI.updateView(options);
     }
 
+    public HashMap<String, String> getOptions() {
+        return options;
+    }
+
     public void setOptions(HashMap<String, String> newState) {
         options = newState;
         myGUI.updateView(options);
@@ -35,8 +39,6 @@ public class App {
     }
 
     public void startNewGame(BoardWindow gameScreen) {
-        // here is where we could get the Player2 and pass that to the constructor to set 2nd player
-        // also difficulty level could be set in the same way
         myBoard = new Board(options, new Human(0));
         myBoard.addObserver(gameScreen);
         myBoard.updateDisplay();
@@ -45,6 +47,14 @@ public class App {
     public void setView(String newView) {
         options.put("view", newView);
         myGUI.updateView(options);
+    }
+
+    public Board getMyBoard() {
+        return myBoard;
+    }
+
+    public GUI getMyGUI() {
+        return myGUI;
     }
 
     public void confirmMove() {
