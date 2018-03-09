@@ -74,54 +74,54 @@ public class Cell extends JButton {
         switch (piece) {
             // Player 1
             case "1♙":
-                setIcon(new ImageIcon("../images/chess-pieces/white-pawn.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-pawn.png")));
                 break;
             case "1♗":
-                setIcon(new ImageIcon("../images/chess-pieces/white-bishop.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-bishop.png")));
                 break;
             case "1♔":
-                setIcon(new ImageIcon("../images/chess-pieces/white-king.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-king.png")));
                 break;
             case "1♚":  // castle check
-                setIcon(new ImageIcon("../images/chess-pieces/white-king.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-king.png")));
                 break;
             case "1♘":
-                setIcon(new ImageIcon("../images/chess-pieces/white-knight.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-king.png")));
                 break;
             case "1♕":
-                setIcon(new ImageIcon("../images/chess-pieces/white-queen.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-queen.png")));
                 break;
             case "1♖":
-                setIcon(new ImageIcon("../images/chess-pieces/white-rook.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-rook.png")));
                 break;
             case "1♜":  // castle check
-                setIcon(new ImageIcon("../images/chess-pieces/white-rook.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-rook.png")));
                 break;
 
              // Player 0
             case "0♙":
-                setIcon(new ImageIcon("../images/chess-pieces/red-pawn.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/red-pawn.png")));
                 break;
             case "0♗":
-                setIcon(new ImageIcon("../images/chess-pieces/red-bishop.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/red-bishop.png")));
                 break;
             case "0♔":
-                setIcon(new ImageIcon("../images/chess-pieces/red-king.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/red-king.png")));
                 break;
             case "0♚":  // castle check
-                setIcon(new ImageIcon("../images/chess-pieces/red-king.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/red-king.png")));
                 break;
             case "0♘":
-                setIcon(new ImageIcon("../images/chess-pieces/red-knight.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/red-knight.png")));
                 break;
             case "0♕":
-                setIcon(new ImageIcon("../images/chess-pieces/red-queen.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/red-queen.png")));
                 break;
             case "0♖":
-                setIcon(new ImageIcon("../images/chess-pieces/red-rook.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/red-rook.png")));
                 break;
             case "0♜":  // castle check
-                setIcon(new ImageIcon("../images/chess-pieces/red-rook.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/red-rook.png")));
                 break;
         }
     }
@@ -130,54 +130,54 @@ public class Cell extends JButton {
         switch (piece) {
             // Player 1
             case "1♙":
-                setIcon(new ImageIcon("../images/chess-pieces/white-pawn.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-pawn.png")));
                 break;
             case "1♗":
-                setIcon(new ImageIcon("../images/chess-pieces/white-bishop.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-bishop.png")));
                 break;
             case "1♔":
-                setIcon(new ImageIcon("../images/chess-pieces/white-king.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-king.png")));
                 break;
             case "1♚":  // castle check
-                setIcon(new ImageIcon("../images/chess-pieces/white-king.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-king.png")));
                 break;
             case "1♘":
-                setIcon(new ImageIcon("../images/chess-pieces/white-knight.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-knight.png")));
                 break;
             case "1♕":
-                setIcon(new ImageIcon("../images/chess-pieces/white-queen.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-queen.png")));
                 break;
             case "1♖":
-                setIcon(new ImageIcon("../images/chess-pieces/white-rook.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-rook.png")));
                 break;
             case "1♜":  // castle check
-                setIcon(new ImageIcon("../images/chess-pieces/white-rook.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-rook.png")));
                 break;
 
            // Player 0
             case "0♙":
-                setIcon(new ImageIcon("../images/chess-pieces/black-pawn.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/black-pawn.png")));
                 break;
             case "0♗":
-                setIcon(new ImageIcon("../images/chess-pieces/black-bishop.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/black-bishop.png")));
                 break;
             case "0♔":
-                setIcon(new ImageIcon("../images/chess-pieces/black-king.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/black-king.png")));
                 break;
             case "0♚":  // castle check
-                setIcon(new ImageIcon("../images/chess-pieces/black-king.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/black-king.png")));
                 break;
             case "0♘":
-                setIcon(new ImageIcon("../images/chess-pieces/black-knight.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/black-knight.png")));
                 break;
             case "0♕":
-                setIcon(new ImageIcon("../images/chess-pieces/black-queen.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/black-queen.png")));
                 break;
             case "0♖":
-                setIcon(new ImageIcon("../images/chess-pieces/black-rook.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/black-rook.png")));
                 break;
             case "0♜":  // castle check
-                setIcon(new ImageIcon("../images/chess-pieces/black-rook.png"));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/black-rook.png")));
                 break;
         }
     }
