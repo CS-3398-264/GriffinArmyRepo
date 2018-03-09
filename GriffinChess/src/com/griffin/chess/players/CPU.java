@@ -114,7 +114,6 @@ public class CPU extends aPlayer {
             enemy.getPieces().get(targetID).kill();
         }
         randomPiece.movePiece(targetRow, targetCol);
-        System.out.println("'easy' move made!");
     }
 
     private void checkForCastling(Piece movingPiece, int targetCol) {
@@ -141,12 +140,9 @@ public class CPU extends aPlayer {
         String targetState = currentBoardState.get(passantRow).get(targetCol);
         if (targetState.length() > 1) {
             if (movingPiece.getType().equals("♙") && movingPiece.getRow() == passantRow && targetState.substring(0,1).equals("-")) {
-                System.out.printf("active pawn at %d,%d is en passant eligible\n", movingPiece.getRow(), targetCol);
                 if (targetCol == targetCol - 1 || targetCol == targetCol + 1) {
                     int targetID = Integer.parseInt(currentBoardState.get(movingPiece.getRow()).get(targetCol).substring(2,4));
                     enemy.getPieces().get(targetID).kill();
-                    System.out.println(currentBoardState.get(movingPiece.getRow()).get(targetCol).substring(2,4));
-                    System.out.println(currentBoardState.get(movingPiece.getRow()).get(targetCol) + " would get killed");
                 }
             }
         }
@@ -205,7 +201,7 @@ public class CPU extends aPlayer {
             targetPiece = enemy.getPieces().get(targetID);
             targetPiece.kill();
             if (bestPiece != null) {
-                System.out.printf("%s captured %s at %d,%d\n", bestPiece.getType(), targetPiece.getType(), bestRow, bestCol);
+                //System.out.printf("%s captured %s at %d,%d\n", bestPiece.getType(), targetPiece.getType(), bestRow, bestCol);
             }
         }
         if (bestPiece != null) {
@@ -214,9 +210,8 @@ public class CPU extends aPlayer {
             // check for en passant here
             checkForEP(bestPiece, bestCol);
             bestPiece.movePiece(bestRow, bestCol);
-            System.out.printf("AI moved %s%d to %d,%d\n", bestPiece.getType(), bestPiece.getID(), bestRow, bestCol);
+            //System.out.printf("AI moved %s%d to %d,%d\n", bestPiece.getType(), bestPiece.getID(), bestRow, bestCol);
         }
-        System.out.printf("%s move taken.\n", difficulty);
     }
 
     protected int calculateBoardScore(ArrayList<ArrayList<String>> board, boolean evalPosition) {

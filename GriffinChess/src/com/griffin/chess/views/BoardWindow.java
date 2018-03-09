@@ -87,7 +87,15 @@ public class BoardWindow extends aWindow implements Observer {
     @Override
     public void update(Observable o, Object arg) {
         ArrayList<ArrayList<String>> boardState = ( ArrayList<ArrayList<String>> ) arg;
-        if (boardState.get(0).get(1).equals("-")) {
+        int blankCount = 0;
+        for (ArrayList<String> row : boardState) {
+            for (String col : row) {
+                if (col.equals("-")) blankCount++;
+            }
+        }
+
+
+        if (blankCount >= 63) {
             setVisible(false);
             String winningPlayer = boardState.get(0).get(0);
             myGUI.setWinner(state, winningPlayer);

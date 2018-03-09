@@ -20,7 +20,6 @@ public class GUI {
     public void updateView(HashMap<String, String> newState) {
         String newView = newState.get("view");
         if (!newView.equals(currentView)) {
-            System.out.println("new view: " + newView); // FOR DEBUGGING
             if (newView.equals("options")) new OptionsWindow(this, newState);
             if (newView.equals("main")) new MenuWindow(this, newState);
             if (newView.equals("board")) myApp.startNewGame(new BoardWindow(this, newState));

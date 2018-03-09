@@ -32,14 +32,11 @@ public class Board extends Observable {
         destinations = new ArrayList<>();
         addPieces();
 
-        // experimental Piece/AI Observer pattern add-on
         for (Player player : players) {
             for (Piece piece : player.getPieces())
                 addObserver(piece);
             addObserver(player);
         }
-        // debugging difficulty levels...
-        System.out.println("difficulty level: " + options.get("difficulty"));
     }
 
     private void addSecondPlayer() {
@@ -171,7 +168,10 @@ public class Board extends Observable {
         String cellState = boardState.get(pieceRow).get(pieceCol);
         int targetRow;
         int targetCol = 0;
-        int pieceID = Integer.parseInt(cellState.substring(2,4));
+        int pieceID = 0;
+        if (cellState.length() >= 3) {
+            pieceID = Integer.parseInt(cellState.substring(2,4));
+        }
         int targetID;
         int enemyID;
         int passantRow;
@@ -183,7 +183,7 @@ public class Board extends Observable {
         // handle human move
         if (players.get(activePlayer).getType().equals("human")) {
 
-            // en passant crap
+            // en passant
             System.out.printf("confirming move for playerID: %d\n", activePlayer);
             System.out.printf("Piece type: %s\n", players.get(activePlayer).getPieces().get(pieceID).getType());
 
@@ -261,7 +261,6 @@ public class Board extends Observable {
 
         // handle computer (AI) move
         } else if (players.get(activePlayer).getType().equals("robot")) {
-
             System.out.println("AI TAKING TURN");   // <-- debugging AI
         }
 
