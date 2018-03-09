@@ -21,17 +21,17 @@ Griffin Chess is developed entirely in Java and can be launched on a system that
 ### 2.1 Product Perspective
 
 Griffin Chess is a java based stand alone application for a Chess game. Griffin Chess shall provide a simple mechanism for users to play against an opponent in a game of chess.
-The following are the main features that shall be included in the game:
-   1/2 player - The game shall provide the options to play against an A.I., or a second player.
-   Difficulty - Varying A.I. difficulty settings shall be available.
+The following are the main features that shall be included in the game:<br/>
+   1/2 player - The game shall provide the options to play against an A.I., or a second player.<br/>
+   Difficulty - Varying A.I. difficulty settings shall be available.<br/>
    Tips/How to play - A section that shall include an explanation of the basic rules of chess, along with some tips to get the user started.
 
 ### 2.2 Product Functions
 
-The following options shall be available in a starting menu: 
-   Single player -> Start a game of chess against a computer: Difficulty selection shall be available here
-   Two-player (if it's one of the features we'll implement) -> Start a game of chess with two players
-   Night/Day mode -> This option shall change the color layout of the board.
+The following options shall be available in a starting menu:<br/> 
+   Single player -> Start a game of chess against a computer: Difficulty selection shall be available here<br/>
+   Two-player (if it's one of the features we'll implement) -> Start a game of chess with two players<br/>
+   Night/Day mode -> This option shall change the color layout of the board<br/>
    Tips/How to play -> display a list of tips/how-to-play manual
 
 ### 2.3 User Classes and Characteristics
