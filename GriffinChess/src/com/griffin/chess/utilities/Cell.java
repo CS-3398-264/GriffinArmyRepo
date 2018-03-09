@@ -86,7 +86,7 @@ public class Cell extends JButton {
                 setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-king.png")));
                 break;
             case "1♘":
-                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-king.png")));
+                setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-knight.png")));
                 break;
             case "1♕":
                 setIcon(new ImageIcon(this.getClass().getResource("/chess-pieces/white-queen.png")));
