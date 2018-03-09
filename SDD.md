@@ -150,9 +150,13 @@ The `OptionsWindow` class extends `aWindow` class and provides characteristics a
 
 ![OptionsWindow Class Breakdown](./images/class-breakdowns/OptionsWindow.png)
 
-### 3.1.4 `CPU` Class
+### 3.1.5 `CPU` Class
 
 The `CPU` class extends the `aPlayer` class and creates an A.I that has varying move making functions based on the difficulty chosen by the user.
+
+### 3.1.6 `PieceFactory` Class
+
+The `PieceFactory` class automatically returns the correct piece type based on the board position and where the pieces should be.
 
 ### 3.2 A.I Implementation
 
