@@ -144,7 +144,7 @@ public class Board extends Observable {
             default:
                 selectedCell.clear();
                 if (!boardState.get(row).get(col).equals("-")) {
-                    int owner = Integer.parseInt(boardState.get(row).get(col).substring(0, 1));
+                    int owner = Integer.parseInt(String.valueOf(boardState.get(row).get(col).charAt(0)));
                     int pieceID = Integer.parseInt(boardState.get(row).get(col).substring(2, 4));
                     if (owner == activePlayer) {
                         selectedCell.add(row);
