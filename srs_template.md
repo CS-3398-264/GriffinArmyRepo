@@ -29,10 +29,10 @@ The following are the main features that shall be included in the game:
 ### 2.2 Product Functions
 
 The following options shall be available in a starting menu: 
-   Single player -> Start a game of chess against a computer: Difficulty selection shall be available here
-   Two-player (if it's one of the features we'll implement) -> Start a game of chess with two players
-   Night/Day mode -> This option shall change the color layout of the board.
-   Tips/How to play -> display a list of tips/how-to-play manual
+Single player -> Start a game of chess against a computer: Difficulty selection shall be available here
+Two-player (if it's one of the features we'll implement) -> Start a game of chess with two players
+Night/Day mode -> This option shall change the color layout of the board
+Tips/How to play -> display a list of tips/how-to-play manual
 
 ### 2.3 User Classes and Characteristics
 
