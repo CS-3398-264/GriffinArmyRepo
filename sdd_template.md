@@ -139,16 +139,28 @@ The `BoardWindow` extends the `aWindow` class and provides characteristics and f
 
 ### 3.1.3 `MenuWindow` Class 
 
-The `MenuWindow` extends the `aWindow` class and provides characteristics and functions unique to the menu.
+The `MenuWindow` class extends the `aWindow` class and provides characteristics and functions unique to the menu.
 
 ![MenuWindow Class Breakdown](./images/class-breakdowns/MenuWindow.png)
 
 
 ### 3.1.4 `OptionsWindows` Class
 
-The `OptionsWindow` class extends `aWindow` and provides characteristics and functions unique to the options.
+The `OptionsWindow` class extends `aWindow` class and provides characteristics and functions unique to the options.
 
 ![OptionsWindow Class Breakdown](./images/class-breakdowns/OptionsWindow.png)
+
+### 3.1.4 `CPU` Class
+
+The `CPU` class extends the `aPlayer` class and creates an A.I that has varying move making functions based on the difficulty chosen by the user.
+
+### 3.2 A.I Implementation
+
+Griffin Chess implements an A.I that has varying difficulties that the user can choose between:
+
+Easy Mode - The A.I makes totally random moves.<br/>
+Medium Mode - The A.I uses piece evaluation, where the only goal is to try and capture the piece that is worth the most value.<br/>
+Hard Mode - The A.I uses piece evaluation, but also takes a calculated position score into account. This is where each piece type on the board has a score and an overall position score is factored into the chosen move.
 
 ## 4. Use Cases
 The Use case diagrams give an representation of the most significant scernarios that the player may use. 
