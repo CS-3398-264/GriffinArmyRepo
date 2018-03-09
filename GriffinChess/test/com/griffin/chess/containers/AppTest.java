@@ -20,7 +20,7 @@ public class AppTest {
     }
 
     @Test
-    public void testChangeOptions() {
+    public void testChangingOptions() {
         App myApp = new App();
         HashMap<String, String> correctOptions = new HashMap<>();
         correctOptions.put("view", "main");
