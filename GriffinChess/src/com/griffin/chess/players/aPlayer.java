@@ -55,7 +55,7 @@ public abstract class aPlayer implements Player {
         return newPieces;
     }
 
-    public void takeAITurn() { }
+    public void takeAITurn(String difficulty) { }
 
     @Override
     public void update(Observable o, Object arg) { }

@@ -9,6 +9,7 @@ public abstract class aPiece implements Piece {
     private int ID;
     protected int row;
     protected int col;
+    protected boolean canCastle;
     private boolean isAlive;
     private ArrayList<ArrayList<String>> boardState;
 
@@ -18,6 +19,7 @@ public abstract class aPiece implements Piece {
         row = startRow;
         col = startCol;
         isAlive = true;
+        canCastle = false;
     }
 
     public abstract String getType();
@@ -44,6 +46,7 @@ public abstract class aPiece implements Piece {
     }
 
     public void movePiece(int newRow, int newCol) {
+        canCastle = false;
         row = newRow;
         col = newCol;
     }
@@ -173,6 +176,8 @@ public abstract class aPiece implements Piece {
         return isAlive;
     }
 
+    public boolean canCastle() { return canCastle; }
+
     public void kill() {
         isAlive = false;
     }
@@ -195,11 +200,11 @@ public abstract class aPiece implements Piece {
     }
 
     boolean isOccupied(String cellState) {
-        return !cellState.substring(0, 1).equals("-");
+        return !cellState.substring(0,1).equals("-");
     }
 
     boolean isOwnPiece(String cellState) {
-        return cellState.length() >= 4 && Integer.parseInt(cellState.substring(0, 1)) == getOwner();
+        return cellState.length() >= 4 && Integer.parseInt(cellState.substring(0,1)) == getOwner();
     }
 
     @Override

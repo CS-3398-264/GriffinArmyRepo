@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class Rook extends aPiece {
     public Rook(int ownerID, int pieceID, int startRow, int startCol) {
         super(ownerID, pieceID, startRow, startCol);
+        canCastle = true;
     }
 
     public String getType() {
-        return "♖";
+        if (canCastle) return "♜";
+        else return "♖";
     }
 
     public ArrayList<ArrayList<Integer>> getAvailableMoves() {
