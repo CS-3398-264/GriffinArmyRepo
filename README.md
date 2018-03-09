@@ -1,4 +1,4 @@
 # Griffin Chess
 
 #### Built w/ the Waterfall Method
-![Waterfall](./images/waterfall.jpg)
+![Waterfall](GriffinChess/images/waterfall.jpg)

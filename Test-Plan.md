@@ -50,7 +50,7 @@
 
 ## Test Plan Output/Analysis
 
-![JUnit Test Plan Output](./images/testPlanOutput.png)
+![JUnit Test Plan Output](GriffinChess/images/testPlanOutput.png)
 * As seen above, we implemented our Test Plan with JUnit 4 unit tests.
 * All of our tested features are passing which matches what we've observed during play tests.
 

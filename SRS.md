@@ -59,11 +59,11 @@ Since this will be a standalone application, there shall not be any other depend
 
 * Images for the chess pieces themselves shall be sourced from a royalty-free provider and follow a tranditional theme, as in the example below.
 
-![Chess Pieces](./images/vector-pieces.jpg)
+![Chess Pieces](GriffinChess/images/vector-pieces.jpg)
 
 * From the title screen, Griffin Chess shall offer the choice of going to the **Options** menu or starting a **New Game** by clicking on the appropriate button, similar to the ones seen in this sample design.
 
-![Main Menu](./images/main-menu.gif)
+![Main Menu](GriffinChess/images/main-menu.gif)
 
 * On the **Options** menu, Griffin Chess shall provide buttons that allow users to customize the games appearence, the type of opponent, and the difficulty (these features are described in detail in Section 4).
 
@@ -73,7 +73,7 @@ Since this will be a standalone application, there shall not be any other depend
 
 * Once a game has begun, Griffin Chess shall display a top down view of a chess board with all of the pieces on it, similar to the prototype below.
 
-![Chess Board](./images/chess-board.gif) 
+![Chess Board](GriffinChess/images/chess-board.gif) 
 
 * On a user's turn, Griffin Chess shall allow pieces to be selected by clicking on the piece directly on the chess board.
 
@@ -83,7 +83,7 @@ Since this will be a standalone application, there shall not be any other depend
 
 * Griffin Chess shall indicate a move has been selected by highlighting a chosen square with a third color, as seen in the prototype image below.
 
-![Highlighted Chess Board](./images/highlighted-chess-board.gif)
+![Highlighted Chess Board](GriffinChess/images/highlighted-chess-board.gif)
 
 * If a chosen move contains an oppsing player's piece, a seperate color shall be used to highlight the square, indication that it can be captured.
 
@@ -101,7 +101,7 @@ Since this will be a standalone application, there shall not be any other depend
 
 * Griffin Chess shall display a message at the end of a game summarizing the results.
 
-![Checkmate Chess Board](./images/endgame-board.gif)
+![Checkmate Chess Board](GriffinChess/images/endgame-board.gif)
 
 ### 3.2 Hardware Interfaces
 Griffin Chess shall require no specific hardware other than a mouse for input, a monitor to display the game, and a computer than can support the JRE, which is needed to run the game files.
@@ -116,7 +116,7 @@ The interface shall provide an option button for a second player or computer opp
    1. Player / Guest 
    2. Computer A.I 
 
-![Figures](./Figures/2.PNG)
+![Figures](GriffinChess/Figures/2.PNG)
 
 ### 4.2 Difficulty level 
 4.2.1 Description
@@ -128,12 +128,12 @@ The greeting interface shall allow the user to change the difficulty level of th
 The overall U.I theme shall be able to change for the comfort of the user due to eyestrain. The default theme when Griffin Chess opens shall be the day mode U.I. The colors for day mode shall be visibly brighter for use in bright conditions. Night mode changes the U.I colors to visibly darker colors to decrease the chance of eyestrain. As mentioned in Section 3.1, the user should have the option to toggle between either day or night mode while in progress of the game by clicking the option menu button. 
 
 
-![Figures](./Figures/Day-mode.jpg)
+![Figures](GriffinChess/Figures/Day-mode.jpg)
 
 
 Figure 3. Day mode feature. 
 
-![Figures](./Figures/Night_mode.jpg)
+![Figures](GriffinChess/Figures/Night_mode.jpg)
 
 
 Figure 4. Night mode feature. 

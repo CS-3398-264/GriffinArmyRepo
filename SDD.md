@@ -45,81 +45,81 @@ Section 4 contains several Use Cases that represent the most vital functions of 
 
 The following diagram (from Reference Source #3) shows a basic Model-View-Controller Architecture, which shall serve as an outline for the structure of Griffin Chess.
 
-![MVC Diagram](./images/mvc-pattern.png)
+![MVC Diagram](GriffinChess/images/mvc-pattern.png)
 
 While Griffin Chess shall interact with the user through the GUI front end, the core mechanics and game data will be managed by a loosely coupled back-end, following the traditional Model-View-Controller pattern pictured above in the example. The game state, logic, and user interactions will be kept separate from the classes that display them, which will allow us to offer users different display options in the future and will allow the teams to write more maintainable, encapsulated code.
 
-![High-Level Class Diagram](./images/high-level-classes.png)
+![High-Level Class Diagram](GriffinChess/images/high-level-classes.png)
 
 ### 2.2.1 `App` Class 
 _<Describe an element (subsystem, component, etc...) from architecture in further detail. When appropriate, include information on how the element is further broken down and the interactions and relationships between these subcomponents.>_
 
 The `App` class acts as the Model in the MVC architecture and maintains the currently selected options.
 
-![App Class Breakdown](./images/class-breakdowns/app.png)
+![App Class Breakdown](GriffinChess/images/class-breakdowns/app.png)
 
 ### 2.2.2 `Board` Class
 
 The `Board` class maintains the state of the board and the location. The Board class extends the Observable class in order to take advantage of the Observer/Observable pattern and keeps its observers constantly updated with the most current version of the board.
 
-![Board Class Breakdown](./images/class-breakdowns/board.png)
+![Board Class Breakdown](GriffinChess/images/class-breakdowns/board.png)
 
 ### 2.2.3 `aPiece` Class
 
 The abstract `aPiece` class contains the implementation of functions that are relevant to all pieces.
 
-![aPiece Class Breakdown](./images/class-breakdowns/aPiece.png)
+![aPiece Class Breakdown](GriffinChess/images/class-breakdowns/aPiece.png)
 
 ### 2.2.4 `Pawn` Class
 
 The `Pawn` extends the `aPiece` class and initializes individual pawn pieces and provides functions for the characteristics of the pawn.
 
-![Pawn Class Breakdown](./images/class-breakdowns/pawn.png)
+![Pawn Class Breakdown](GriffinChess/images/class-breakdowns/pawn.png)
 
 
 ### 2.2.5 `Piece` Interface
 
 The `Piece` interface provides function declarations that are relevant to all pieces.
 
-![Piece Class Breakdown](./images/piece.png)
+![Piece Class Breakdown](GriffinChess/images/piece.png)
 
 
 ### 2.2.6 `Human` Class
 
 The `Human` class implements `Player` and creates a player and initializes the pieces.
 
-![Human Class Breakdown](./images/class-breakdowns/human.png)
+![Human Class Breakdown](GriffinChess/images/class-breakdowns/human.png)
 
 
 ### 2.2.7 `Player` Interface
 
 The `Player` interface provides function declarations that are relevant to all players.
 
-![Player Class Breakdown](./images/class-breakdowns/player.png)
+![Player Class Breakdown](GriffinChess/images/class-breakdowns/player.png)
 
 
 ### 2.2.8 `Cell` Class
 
 The `Cell` class extends `JButton` and initializes the characteristics of each cell on the chess board and specifies colors for the varying moves of the chess pieces and the natural color of the cells of the board.
 
-![Cell Class Breakdown](./images/class-breakdowns/cell.png)
+![Cell Class Breakdown](GriffinChess/images/class-breakdowns/cell.png)
 
 
 ### 2.2.9 `GUI` Class
 
 The `GUI` class instantiates the View and graphics.
 
-![GUI Class Breakdown](./images/class-breakdowns/gui.png)
+![GUI Class Breakdown](GriffinChess/images/class-breakdowns/gui.png)
 
 ## 3. High-Level Design
 
 Griffin Chess shall accept input from the user through mouse clicks on buttons in the menus, and on cells of the chess board during the game. The following sequence diagram shows how input shall be handled by the View components and the flow of data back to the Model. From there, the Observable `Board` class shall update the View directly with the newest version of the board state, which then highlights its cells accordingly
 
-![Sequence Diagram](./images/observer-sequence.png)
+![Sequence Diagram](GriffinChess/images/observer-sequence.png)
 
 The user opens the Griffin Chess application and an initial start screen is shown. The user has the choice to start the game or change certain options to the preferences of the user. The user can change display options, whether the opponent should be another person or the AI, varying difficulties for the AI, and can cancel changes or apply those changes to the game. If the user chooses to start the game, the chess board and pieces are generated and the user can play the game. When the user moves a piece, the move is confirmed by the user and the piece moves to an available space until the game ends by checkmate or stalemate. The user can also quit in the middle of the game at any time.
 
-![State Diagram](./images/state-diagram.png)
+![State Diagram](GriffinChess/images/state-diagram.png)
 
 ### 3.1 View / Model Components
 
@@ -127,34 +127,34 @@ The user opens the Griffin Chess application and an initial start screen is show
 
 The `aWindow` class provides characteristics and functions that are common to all unique windows.
 
-![aWindow Class Breakdown](./images/class-breakdowns/aWindow.png)
+![aWindow Class Breakdown](GriffinChess/images/class-breakdowns/aWindow.png)
 
 
 ### 3.1.2 `BoardWindow` Class
 
 The `BoardWindow` extends the `aWindow` class and provides characteristics and functions unique to the board.
 
-![BoardWindow Class Breakdown](./images/class-breakdowns/BoardWindow.png)
+![BoardWindow Class Breakdown](GriffinChess/images/class-breakdowns/BoardWindow.png)
 
 
 ### 3.1.3 `MenuWindow` Class 
 
 The `MenuWindow` class extends the `aWindow` class and provides characteristics and functions unique to the menu.
 
-![MenuWindow Class Breakdown](./images/class-breakdowns/MenuWindow.png)
+![MenuWindow Class Breakdown](GriffinChess/images/class-breakdowns/MenuWindow.png)
 
 
 ### 3.1.4 `OptionsWindows` Class
 
 The `OptionsWindow` class extends `aWindow` class and provides characteristics and functions unique to the options.
 
-![OptionsWindow Class Breakdown](./images/class-breakdowns/OptionsWindow.png)
+![OptionsWindow Class Breakdown](GriffinChess/images/class-breakdowns/OptionsWindow.png)
 
 ### 3.1.5 `CPU` Class
 
 The `CPU` class extends the `aPlayer` class and creates an A.I that has varying move making functions based on the difficulty chosen by the user.
 
-![CPU Class Breakdown](./images/class-breakdowns/cpu.png)
+![CPU Class Breakdown](GriffinChess/images/class-breakdowns/cpu.png)
 
 ### 3.1.6 `PieceFactory` Class
 
@@ -171,28 +171,28 @@ Hard Mode - The A.I uses piece evaluation, but also takes a calculated position 
 ## 4. Use Cases
 The Use case diagrams give an representation of the most significant scernarios that the player may use. 
 ### 4.1 Start Game/Options
-![Use Case 1](./images/use-case-1.png)
+![Use Case 1](GriffinChess/images/use-case-1.png)
 
 Preconditions: None 
 
 Main Flow: As Griffin Chess is opened, the player has the choice to start the game immediately. The second choice is the option menu to prompt the user with difficulty level, opponent, and Day/Night mode. 
 
 ### 4.2 Move Pieces
-![Use Case 2](./images/use-case-2.png)
+![Use Case 2](GriffinChess/images/use-case-2.png)
 
 Preconditions: While in the game.
 
 Main Flow: The player with the current turn has the option to move the selected piece. 
 
 ### 4.3 Choosing of A.I opponent
-![Use Case 3](./images/use-case-3.png)
+![Use Case 3](GriffinChess/images/use-case-3.png)
 
 Preconditions: While in the game.
 
 Main Flow: The player chooses the A.I as an opponent, starts the game, and while in the game has the option to move the selected piece or quit the game. 
 
 ### 4.4 Player vs Player 
-![Use Case 4](./images/use-case-4.png)
+![Use Case 4](GriffinChess/images/use-case-4.png)
 
 Preconditions: While in the game.
 
