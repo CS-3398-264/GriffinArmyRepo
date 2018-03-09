@@ -205,7 +205,7 @@ public class Board extends Observable {
                 // kill target piece if it exists
                 if (targetState.length() >= 4) {
                     targetID = Integer.parseInt(targetState.substring(2, 4));
-                    enemyID = Integer.parseInt(targetState.substring(0));
+                    enemyID = (activePlayer + 1) % players.size();
                     // call the enemy players' com.griffin.chess.pieces' kill method
                     players.get(enemyID).getPieces().get(targetID).kill();
                 }
