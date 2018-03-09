@@ -76,11 +76,9 @@ public class BoardWindow extends aWindow implements Observer {
                 myGUI.setView("main");
                 break;
             case "Confirm":
-                //System.out.println("Taking Turn...");
                 myGUI.confirmMove();
                 break;
             default:
-                //System.out.println(buttonType);
                 myGUI.setSelected(buttonType);
                 break;
         }
@@ -88,8 +86,13 @@ public class BoardWindow extends aWindow implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        //System.out.println("receiving update from board...");
         ArrayList<ArrayList<String>> boardState = ( ArrayList<ArrayList<String>> ) arg;
-        displayBoard(boardState);
+        if (boardState.get(0).get(1).equals("-")) {
+            setVisible(false);
+            String winningPlayer = boardState.get(0).get(0);
+            myGUI.setWinner(state, winningPlayer);
+        } else {
+            displayBoard(boardState);
+        }
     }
 }

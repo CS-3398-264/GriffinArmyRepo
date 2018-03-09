@@ -161,6 +161,7 @@ public class Board extends Observable {
     }
 
     public void confirmMove() {
+        boolean kingKilled = false;
         int pieceRow = 0;
         int pieceCol = 0;
         if (!selectedCell.isEmpty()) {
@@ -200,6 +201,10 @@ public class Board extends Observable {
                     enemyID = (activePlayer + 1) % players.size();
                     // call the enemy players' com.griffin.chess.pieces' kill method
                     players.get(enemyID).getPieces().get(targetID).kill();
+                    if (players.get(enemyID).getPieces().get(targetID).getType().equals("♔") ||
+                            players.get(enemyID).getPieces().get(targetID).getType().equals("♚")) {
+                        kingKilled = true;
+                    }
                 }
                 int moveDistance = Math.abs(targetCol - activePiece.getCol());
 
@@ -256,22 +261,42 @@ public class Board extends Observable {
 
         // handle computer (AI) move
         } else if (players.get(activePlayer).getType().equals("robot")) {
-            // perform check for castling flag
+
             System.out.println("AI TAKING TURN");   // <-- debugging AI
         }
-        // toggle the active player
-        activePlayer = (activePlayer + 1) % players.size();
-        // update the view
-        selectedCell.clear();
-        destinations.clear();
-        targetCell.clear();
-        updateDisplay();
-        // let the computer (AI) know to go
-        if (players.get(activePlayer).getType().equals("robot"))
-            notifyAI(players.get(activePlayer));
+
+        if (!kingKilled) {
+            // toggle the active player
+            activePlayer = (activePlayer + 1) % players.size();
+            // update the view
+            selectedCell.clear();
+            destinations.clear();
+            targetCell.clear();
+            updateDisplay();
+            // let the computer (AI) know to go
+            if (players.get(activePlayer).getType().equals("robot")) {
+                notifyAI(players.get(activePlayer));
+                if (!players.get(0).getPieces().get(12).isAlive()) {
+                    setChanged();
+                    ArrayList<ArrayList<String>> winBoard = generateBlankBoard();
+                    Integer winningPlayer = activePlayer;
+                    String winString = "Player " + winningPlayer;
+                    winBoard.get(0).set(0, winString);
+                    notifyObservers(winBoard);
+                }
+            }
+        } else {
+            setChanged();
+            ArrayList<ArrayList<String>> winBoard = generateBlankBoard();
+            Integer winningPlayer = activePlayer + 1;
+            String winString = "Player " + winningPlayer;
+            winBoard.get(0).set(0, winString);
+            notifyObservers(winBoard);
+        }
     }
 
     public void notifyAI(Player aiPlayer) {
+
         aiPlayer.takeAITurn(gameOptions.get("difficulty"));
         confirmMove();
     }
