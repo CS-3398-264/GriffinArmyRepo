@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class BoardTest {
 
     @Test
-    public void testPieceSelectionWithAvailableMoves() {
+    public void testPieceSelectionWithHighlightedMoves() {
         HashMap<String, String> initialOptions = new HashMap<>();
         initialOptions.put("view", "main");
         initialOptions.put("theme", "day");
