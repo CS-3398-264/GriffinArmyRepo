@@ -169,8 +169,12 @@ public class Board extends Observable {
     }
 
     public void confirmMove() {
-        int pieceRow = selectedCell.get(0);
-        int pieceCol = selectedCell.get(1);
+        int pieceRow = 0;
+        int pieceCol = 0;
+        if (!selectedCell.isEmpty()) {
+            pieceRow = selectedCell.get(0);
+            pieceCol = selectedCell.get(1);
+        }
         String cellState = boardState.get(pieceRow).get(pieceCol);
         int targetRow;
         int targetCol = 0;
@@ -201,7 +205,7 @@ public class Board extends Observable {
                 // kill target piece if it exists
                 if (targetState.length() >= 4) {
                     targetID = Integer.parseInt(targetState.substring(2, 4));
-                    enemyID = Integer.parseInt(targetState.substring(0, 1));
+                    enemyID = Integer.parseInt(targetState.substring(0));
                     // call the enemy players' com.griffin.chess.pieces' kill method
                     players.get(enemyID).getPieces().get(targetID).kill();
                 }
