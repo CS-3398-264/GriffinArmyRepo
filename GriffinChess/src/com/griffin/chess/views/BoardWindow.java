@@ -32,7 +32,6 @@ public class BoardWindow extends aWindow implements Observer {
         takeTurnButton.addActionListener(this);
         applyButtonTheme(takeTurnButton);
         add(takeTurnButton);
-
         setVisible(true);
     }
 
@@ -91,13 +90,6 @@ public class BoardWindow extends aWindow implements Observer {
     public void update(Observable o, Object arg) {
         //System.out.println("receiving update from board...");
         ArrayList<ArrayList<String>> boardState = ( ArrayList<ArrayList<String>> ) arg;
-
-        // this is for debugging only
-        /*
-        for (ArrayList row : boardState) {
-            System.out.println(row.toString());
-        }
-        */
         displayBoard(boardState);
     }
 }
